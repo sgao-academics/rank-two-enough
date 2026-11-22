@@ -1,0 +1,859 @@
+{
+ "run_label": "pilot 48ep T15 m1 H6 R-samp",
+ "env": {
+  "schema_version": "1.0",
+  "spec_version": "1.3",
+  "python": "3.12.13",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "adapter": "mujoco:push3d",
+  "fingerprint": {
+   "sim": "mujoco",
+   "mujoco_version": "3.17.0",
+   "scene": "push3d (CausalWorld-style factorisation)",
+   "timestep": 0.002,
+   "substeps_per_control_step": 50,
+   "control_dt": 0.1,
+   "integrator": "Euler",
+   "cone": "pyramidal",
+   "solver": 2,
+   "solver_iterations": 100,
+   "noslip_iterations": 0,
+   "n_joint_dof": 15,
+   "n_bodies": 4,
+   "causal_factors": {
+    "object_mass": 0.04649479162469679,
+    "object_half_size": 0.023549422121833502,
+    "sliding_friction": 0.699649170339743,
+    "target_xy": [
+     -0.1297565268432453,
+     -0.11951973598657302
+    ],
+    "distractor_xy": [
+     -0.10673263817726088,
+     0.12766837467267123
+    ]
+   }
+  }
+ },
+ "dataset": {
+  "phi_ref": 0.19581106564194806,
+  "K": 5,
+  "H": 6,
+  "T": 15,
+  "rule": "R-samp",
+  "n_episodes": 48,
+  "n_steps": 720,
+  "conventions": {
+   "primary": "C_closed_loop",
+   "secondary": "O_open_loop",
+   "diagnostic_only": "S_one_step"
+  },
+  "base_policy": "scripted_frozen_expert (NOT a learned policy)"
+ },
+ "split": {
+  "seed": 0,
+  "on": "template",
+  "report": {
+   "ok": true,
+   "n_train_templates": 10,
+   "n_val_templates": 2,
+   "n_test_templates": 4,
+   "template_leak": [],
+   "instance_leak": [],
+   "unseen_object_combination_rate": 1.0,
+   "n_episodes": {
+    "train": 30,
+    "val": 12,
+    "test": 6
+   },
+   "counts": 48
+  },
+  "n_train": 30,
+  "n_val": 12,
+  "n_eval": 6
+ },
+ "eval_split": "test",
+ "config": {
+  "K": 5,
+  "H": 6,
+  "plan_len": 1,
+  "T": 15,
+  "warmup": 6,
+  "rule": "R-samp",
+  "n_cand": 8,
+  "proposal_sigma": 0.8,
+  "min_arm_sep": 0.25,
+  "min_spread": 0.125,
+  "plan_alt_frac": 0.5,
+  "control_substeps": 50,
+  "eps_degen": 1e-06,
+  "seed": 0
+ },
+ "estimates": [
+  {
+   "conv": "C",
+   "label": "B0 no-effect",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.0,
+   "dar_ci95": [
+    0.0,
+    0.0
+   ],
+   "nmae": 1.8282357817325785,
+   "nmae_ci95": [
+    1.3457051056728138,
+    2.2527966812951656
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.010313484349876181,
+   "regret_ci95": [
+    0.004469078824229946,
+    0.017490770497560284
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.14444444444444443,
+   "zero_regret_rate_ci95": [
+    0.08888888888888889,
+    0.2
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.02920503741155627,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "B1 bet-on-expert",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.5333333333333333,
+   "dar_ci95": [
+    0.46111111111111114,
+    0.6194444444444445
+   ],
+   "nmae": 1.9411652612823702,
+   "nmae_ci95": [
+    1.4125136508254525,
+    2.4491164572649753
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.010313484349876181,
+   "regret_ci95": [
+    0.004469078824229946,
+    0.017490770497560284
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.14444444444444443,
+   "zero_regret_rate_ci95": [
+    0.08888888888888889,
+    0.2
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.02920503741155627,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "B2 ridge surrogate",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.3972222222222222,
+   "dar_ci95": [
+    0.3277777777777778,
+    0.46944444444444444
+   ],
+   "nmae": 1.9483119919322693,
+   "nmae_ci95": [
+    1.4230035958359153,
+    2.5182940935003733
+   ],
+   "rho": -0.3905409255338946,
+   "rho_ci95": [
+    -0.5556524120272361,
+    -0.2249561099350171
+   ],
+   "tau": -0.36199486217602167,
+   "tau_ci95": [
+    -0.5175504177315772,
+    -0.21014301032416974
+   ],
+   "regret": 0.012410612697121463,
+   "regret_ci95": [
+    0.007285827104501927,
+    0.019812462031685994
+   ],
+   "regret_norm": 10.870378784340753,
+   "regret_norm_ci95": [
+    1.4280359785011558,
+    30.24361708151605
+   ],
+   "zero_regret_rate": 0.1111111111111111,
+   "zero_regret_rate_ci95": [
+    0.05555555555555555,
+    0.16666666666666666
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.029036260827384083,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "C1 ridge arm-shuffled (control)",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.3972222222222222,
+   "dar_ci95": [
+    0.24166666666666667,
+    0.5444444444444444
+   ],
+   "nmae": 1.9882660157856529,
+   "nmae_ci95": [
+    1.4124050444310199,
+    2.597736949674071
+   ],
+   "rho": -0.26387425886722793,
+   "rho_ci95": [
+    -0.5444444444444444,
+    -0.02609648108945016
+   ],
+   "tau": -0.2508837510649105,
+   "tau_ci95": [
+    -0.5212541214352808,
+    -0.02125412143528087
+   ],
+   "regret": 0.012889653677179017,
+   "regret_ci95": [
+    0.007051259239445066,
+    0.02158480140987192
+   ],
+   "regret_norm": 10.849937312085936,
+   "regret_norm_ci95": [
+    1.2588087823702903,
+    30.20580197380187
+   ],
+   "zero_regret_rate": 0.12222222222222222,
+   "zero_regret_rate_ci95": [
+    0.044444444444444446,
+    0.2111111111111111
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.039241716728782385,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "control"
+  },
+  {
+   "conv": "C",
+   "label": "R1 one-step oracle (model-based)",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.8833333333333333,
+   "dar_ci95": [
+    0.7861111111111111,
+    0.9611111111111111
+   ],
+   "nmae": 1.0156865105991164,
+   "nmae_ci95": [
+    0.6216964323415747,
+    1.6975972579154992
+   ],
+   "rho": 0.8438742588672279,
+   "rho_ci95": [
+    0.7377777777777779,
+    0.9377777777777778
+   ],
+   "tau": 0.8101430103241698,
+   "tau_ci95": [
+    0.7091749095372285,
+    0.9037037037037038
+   ],
+   "regret": 0.0010091470087015538,
+   "regret_ci95": [
+    5.874191973964859e-05,
+    0.0021659205968934054
+   ],
+   "regret_norm": 0.14459680103111727,
+   "regret_norm_ci95": [
+    0.02319540516064259,
+    0.26485981927125457
+   ],
+   "zero_regret_rate": 0.8444444444444444,
+   "zero_regret_rate_ci95": [
+    0.7333333333333333,
+    0.9555555555555556
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.0014017846061060736,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "reference"
+  },
+  {
+   "conv": "O",
+   "label": "B0 no-effect",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.0,
+   "dar_ci95": [
+    0.0,
+    0.0
+   ],
+   "nmae": 1.7755378650483211,
+   "nmae_ci95": [
+    1.214555712240134,
+    2.1328891652898574
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.014842919954648351,
+   "regret_ci95": [
+    0.006741111216830379,
+    0.02393368212779949
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.14444444444444443,
+   "zero_regret_rate_ci95": [
+    0.08888888888888889,
+    0.2
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.04101074644867955,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "B1 bet-on-expert",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.5277777777777778,
+   "dar_ci95": [
+    0.4527777777777778,
+    0.6166666666666667
+   ],
+   "nmae": 1.8972243236760613,
+   "nmae_ci95": [
+    1.2486323565429216,
+    2.3537021195932697
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.014842919954648351,
+   "regret_ci95": [
+    0.006741111216830379,
+    0.02393368212779949
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.14444444444444443,
+   "zero_regret_rate_ci95": [
+    0.08888888888888889,
+    0.2
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.04101074644867955,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "B2 ridge surrogate",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.4777777777777778,
+   "dar_ci95": [
+    0.39444444444444443,
+    0.5666666666666667
+   ],
+   "nmae": 1.8014551641716479,
+   "nmae_ci95": [
+    1.223553223502034,
+    2.184543152594902
+   ],
+   "rho": -0.13555555555555557,
+   "rho_ci95": [
+    -0.42888888888888893,
+    0.16444444444444442
+   ],
+   "tau": -0.12222222222222225,
+   "tau_ci95": [
+    -0.37777777777777777,
+    0.13333333333333336
+   ],
+   "regret": 0.013270099978383352,
+   "regret_ci95": [
+    0.006006168744120489,
+    0.02480399398361059
+   ],
+   "regret_norm": 3.5179613743075895,
+   "regret_norm_ci95": [
+    0.9163766496761531,
+    7.719616529279689
+   ],
+   "zero_regret_rate": 0.25555555555555554,
+   "zero_regret_rate_ci95": [
+    0.08888888888888889,
+    0.43333333333333335
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.037893681261757566,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "C1 ridge arm-shuffled (control)",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.4,
+   "dar_ci95": [
+    0.26944444444444443,
+    0.5194444444444445
+   ],
+   "nmae": 1.8749341608529195,
+   "nmae_ci95": [
+    1.2359801777967514,
+    2.3909110343684734
+   ],
+   "rho": -0.33333333333333337,
+   "rho_ci95": [
+    -0.6088888888888888,
+    -0.06666666666666668
+   ],
+   "tau": -0.3,
+   "tau_ci95": [
+    -0.5555555555555556,
+    -0.05925925925925925
+   ],
+   "regret": 0.019499497657079718,
+   "regret_ci95": [
+    0.008763227709596534,
+    0.03242995372298866
+   ],
+   "regret_norm": 5.749533853259805,
+   "regret_norm_ci95": [
+    1.348846892060987,
+    13.670558582367617
+   ],
+   "zero_regret_rate": 0.1111111111111111,
+   "zero_regret_rate_ci95": [
+    0.03333333333333333,
+    0.2111111111111111
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.05951933184297716,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "control"
+  },
+  {
+   "conv": "O",
+   "label": "R1 one-step oracle (model-based)",
+   "n_episodes": 6,
+   "n_steps": 90,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.8944444444444445,
+   "dar_ci95": [
+    0.8027777777777778,
+    0.9666666666666667
+   ],
+   "nmae": 0.9662971822732425,
+   "nmae_ci95": [
+    0.5896075552313902,
+    1.3598554545310302
+   ],
+   "rho": 0.8555555555555555,
+   "rho_ci95": [
+    0.7511111111111111,
+    0.9422222222222223
+   ],
+   "tau": 0.8185185185185185,
+   "tau_ci95": [
+    0.7111111111111111,
+    0.9111111111111111
+   ],
+   "regret": 0.0011633559304951543,
+   "regret_ci95": [
+    1.006477823129529e-05,
+    0.0028310171180533994
+   ],
+   "regret_norm": 0.3938850103505435,
+   "regret_norm_ci95": [
+    0.02149482260365638,
+    0.9181196087430236
+   ],
+   "zero_regret_rate": 0.8333333333333334,
+   "zero_regret_rate_ci95": [
+    0.7111111111111111,
+    0.9555555555555556
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.8555555555555555,
+   "nontrivial_step_rate_ci95": [
+    0.8,
+    0.9111111111111111
+   ],
+   "regret_p90": 0.000581756227454224,
+   "n_train_episodes": 30,
+   "n_test_episodes": 6,
+   "n_train_steps": 450,
+   "n_test_steps": 90,
+   "kind": "reference"
+  }
+ ],
+ "checks": {
+  "oracle DAR == 1 on eval split": true,
+  "oracle regret == 0 on eval split": true,
+  "no-effect DAR == 0": true,
+  "chance is measured, not assumed": true,
+  "negative control sits at chance": true,
+  "signs are mixed (a direction metric needs both)": true,
+  "split has no leak": true,
+  "train and eval splits are disjoint": true,
+  "both conventions generated": true,
+  "degenerate ratio below no-signal threshold": true,
+  "Gate-2 ruler passed": true,
+  "plan unit: 1-step ordering is not identical on every step": true,
+  "arm 0 replays to the factual trajectory within tolerance": true,
+  "one-step oracle delta == 1-step truth delta": true
+ },
+ "all_checks_passed": true,
+ "extra": {
+  "per_convention": {
+   "C": {
+    "table": "RolloutTable(steps=90, K=5, episodes=6, degenerate=0.0%)",
+    "ruler": {
+     "passed": true,
+     "oracle_dar": 1.0,
+     "oracle_nmae": 0.0,
+     "oracle_regret_norm": 0.0,
+     "chance_dar_perm_mean": 0.49670833333333336,
+     "chance_dar_perm_sd": 0.026803867966451466,
+     "chance_rho": -0.003590936235771288,
+     "permutations": 200,
+     "p_positive": 0.4666666666666667
+    },
+    "oracle": {
+     "label": "REF oracle (ceiling, not a method)",
+     "n_episodes": 6,
+     "n_steps": 90,
+     "degenerate_rate": 0.0,
+     "eps": 1e-06,
+     "eps_source": "caller",
+     "n_boot": 200,
+     "dar": 1.0,
+     "dar_ci95": [
+      1.0,
+      1.0
+     ],
+     "nmae": 0.0,
+     "nmae_ci95": [
+      0.0,
+      0.0
+     ],
+     "rho": 1.0,
+     "rho_ci95": [
+      1.0,
+      1.0
+     ],
+     "tau": 1.0,
+     "tau_ci95": [
+      1.0,
+      1.0
+     ],
+     "regret": 0.0,
+     "regret_ci95": [
+      0.0,
+      0.0
+     ],
+     "regret_norm": 0.0,
+     "regret_norm_ci95": [
+      0.0,
+      0.0
+     ],
+     "zero_regret_rate": 1.0,
+     "zero_regret_rate_ci95": [
+      1.0,
+      1.0
+     ],
+     "undecidable_rate": 0.0,
+     "undecidable_rate_ci95": [
+      0.0,
+      0.0
+     ],
+     "nontrivial_step_rate": 0.8555555555555555,
+     "nontrivial_step_rate_ci95": [
+      0.7997222222222222,
+      0.9111111111111111
+     ],
+     "regret_p90": 0.0
+    }
+   },
+   "O": {
+    "table": "RolloutTable(steps=90, K=5, episodes=6, degenerate=0.0%)",
+    "ruler": {
+     "passed": true,
+     "oracle_dar": 1.0,
+     "oracle_nmae": 0.0,
+     "oracle_regret_norm": 0.0,
+     "chance_dar_perm_mean": 0.4978611111111111,
+     "chance_dar_perm_sd": 0.027973904837398936,
+     "chance_rho": -0.0020444444444444442,
+     "permutations": 200,
+     "p_positive": 0.4722222222222222
+    },
+    "oracle": {
+     "label": "REF oracle (ceiling, not a method)",
+     "n_episodes": 6,
+     "n_steps": 90,
+     "degenerate_rate": 0.0,
+     "eps": 1e-06,
+     "eps_source": "caller",
+     "n_boot": 200,
+     "dar": 1.0,
+     "dar_ci95": [
+      1.0,
+      1.0
+     ],
+     "nmae": 0.0,
+     "nmae_ci95": [
+      0.0,
+      0.0
+     ],
+     "rho": 1.0,
+     "rho_ci95": [
+      1.0,
+      1.0
+     ],
+     "tau": 1.0,
+     "tau_ci95": [
+      1.0,
+      1.0
+     ],
+     "regret": 0.0,
+     "regret_ci95": [
+      0.0,
+      0.0
+     ],
+     "regret_norm": 0.0,
+     "regret_norm_ci95": [
+      0.0,
+      0.0
+     ],
+     "zero_regret_rate": 1.0,
+     "zero_regret_rate_ci95": [
+      1.0,
+      1.0
+     ],
+     "undecidable_rate": 0.0,
+     "undecidable_rate_ci95": [
+      0.0,
+      0.0
+     ],
+     "nontrivial_step_rate": 0.8555555555555555,
+     "nontrivial_step_rate_ci95": [
+      0.7997222222222222,
+      0.9111111111111111
+     ],
+     "regret_p90": 0.0
+    }
+   }
+  },
+  "task_properties": {
+   "plan_content_C": {
+    "n_steps": 720,
+    "rho_mean": 0.8133703279703487,
+    "identical_ranking_rate": 0.5875,
+    "argmax_agreement": 0.8069444444444445
+   },
+   "horizon_collapse_C": {
+    "n_steps": 720,
+    "rho_mean": 0.8133703279703487,
+    "identical_ranking_rate": 0.5875,
+    "argmax_agreement": 0.8069444444444445
+   },
+   "one_step_oracle_identity_max_abs": 6.965490348138231e-11,
+   "decision_unit": "plan",
+   "plan_len": 1,
+   "plan_tail": 5
+  }
+ }
+}

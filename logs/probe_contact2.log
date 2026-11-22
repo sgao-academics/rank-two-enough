@@ -1,0 +1,37 @@
+﻿phi_ref = 0.33012
+
+c0  half=0.018 mass=0.062 fric=0.62
+  t= 0  d_po=0.0404  gap=0.0102  d_ot=0.1853  phi=0.3101  |dobj|=0.00e+00
+  t= 1  d_po=0.0383  gap=0.0082  d_ot=0.1850  phi=0.3120  |dobj|=3.27e-04
+  t= 2  d_po=0.0380  gap=0.0079  d_ot=0.1837  phi=0.3136  |dobj|=1.32e-03
+  t= 3  d_po=0.0378  gap=0.0076  d_ot=0.1824  phi=0.3153  |dobj|=1.36e-03
+  t= 4  d_po=0.0375  gap=0.0073  d_ot=0.1811  phi=0.3170  |dobj|=1.33e-03
+  t= 5  d_po=0.0372  gap=0.0071  d_ot=0.1798  phi=0.3186  |dobj|=1.30e-03
+  y_C[0] (factual): min 0.0275 max 0.0303 | spread across arms: mean 0.0371 max 0.0449
+
+c1  half=0.020 mass=0.066 fric=1.07
+  t= 0  d_po=0.0417  gap=0.0093  d_ot=0.1600  phi=0.3394  |dobj|=0.00e+00
+  t= 1  d_po=0.0413  gap=0.0090  d_ot=0.1581  phi=0.3421  |dobj|=1.85e-03
+  t= 2  d_po=0.0411  gap=0.0087  d_ot=0.1561  phi=0.3449  |dobj|=1.99e-03
+  t= 3  d_po=0.0408  gap=0.0085  d_ot=0.1543  phi=0.3477  |dobj|=1.90e-03
+  t= 4  d_po=0.0406  gap=0.0082  d_ot=0.1523  phi=0.3506  |dobj|=1.94e-03
+  t= 5  d_po=0.0404  gap=0.0081  d_ot=0.1504  phi=0.3534  |dobj|=1.94e-03
+  y_C[0] (factual): min 0.0514 max 0.0531 | spread across arms: mean 0.0716 max 0.0983
+
+c2  half=0.017 mass=0.066 fric=1.03
+  t= 0  d_po=0.0404  gap=0.0110  d_ot=0.1759  phi=0.3208  |dobj|=0.00e+00
+  t= 1  d_po=0.0378  gap=0.0084  d_ot=0.1759  phi=0.3227  |dobj|=1.63e-15
+  t= 2  d_po=0.0367  gap=0.0073  d_ot=0.1755  phi=0.3239  |dobj|=3.34e-04
+  t= 3  d_po=0.0365  gap=0.0071  d_ot=0.1747  phi=0.3251  |dobj|=8.66e-04
+  t= 4  d_po=0.0364  gap=0.0070  d_ot=0.1737  phi=0.3264  |dobj|=1.01e-03
+  t= 5  d_po=0.0362  gap=0.0068  d_ot=0.1726  phi=0.3278  |dobj|=1.05e-03
+  y_C[0] (factual): min 0.0244 max 0.0260 | spread across arms: mean 0.0647 max 0.1020
+
+c3  half=0.021 mass=0.036 fric=0.92
+  t= 0  d_po=0.0443  gap=0.0109  d_ot=0.1472  phi=0.3549  |dobj|=0.00e+00
+  t= 1  d_po=0.0439  gap=0.0105  d_ot=0.1447  phi=0.3589  |dobj|=2.58e-03
+  t= 2  d_po=0.0435  gap=0.0102  d_ot=0.1422  phi=0.3628  |dobj|=2.52e-03
+  t= 3  d_po=0.0432  gap=0.0098  d_ot=0.1398  phi=0.3667  |dobj|=2.44e-03
+  t= 4  d_po=0.0428  gap=0.0095  d_ot=0.1375  phi=0.3705  |dobj|=2.34e-03
+  t= 5  d_po=0.0426  gap=0.0092  d_ot=0.1352  phi=0.3744  |dobj|=2.46e-03
+  y_C[0] (factual): min 0.0711 max 0.0730 | spread across arms: mean 0.1066 max 0.1374

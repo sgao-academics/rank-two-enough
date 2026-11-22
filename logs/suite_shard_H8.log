@@ -1,0 +1,97 @@
+20:17:36  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:18:44  dataset H8    s00 GEN  67.4s ds_H8_s00_e96.json
+20:18:50  evals   H8    s00 sp0 5.9s n={'train': 60, 'val': 24, 'test': 12}
+20:18:58  evals   H8    s00 sp1 8.4s n={'train': 66, 'val': 12, 'test': 18}
+20:19:04  evals   H8    s00 sp2 6.2s n={'train': 78, 'val': 6, 'test': 12}
+20:19:08  evals   H8    s00 sp3 3.5s n={'train': 66, 'val': 24, 'test': 6}
+20:19:21  evals   H8    s00 sp4 13.4s n={'train': 66, 'val': 0, 'test': 30}
+20:20:29  dataset H8    s01 GEN  68.0s ds_H8_s01_e96.json
+20:20:35  evals   H8    s01 sp0 6.0s n={'train': 60, 'val': 24, 'test': 12}
+20:20:44  evals   H8    s01 sp1 8.6s n={'train': 66, 'val': 12, 'test': 18}
+20:21:07  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:21:07  dataset H8    s00 cached 0.0s ds_H8_s00_e96.json
+20:21:19  evals   H8    s00 sp0 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:21:32  evals   H8    s00 sp1 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:21:44  evals   H8    s00 sp2 12.2s n={'train': 66, 'val': 12, 'test': 18}
+20:21:56  evals   H8    s00 sp3 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:09  evals   H8    s00 sp4 12.3s n={'train': 66, 'val': 12, 'test': 18}
+20:22:09  dataset H8    s01 cached 0.0s ds_H8_s01_e96.json
+20:22:21  evals   H8    s01 sp0 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:34  evals   H8    s01 sp1 12.6s n={'train': 66, 'val': 12, 'test': 18}
+20:22:46  evals   H8    s01 sp2 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:59  evals   H8    s01 sp3 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:23:11  evals   H8    s01 sp4 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:24:06  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:24:06  dataset H8    s00 cached 0.0s ds_H8_s00_e96.json
+20:24:23  evals   H8    s00 sp0 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:24:40  evals   H8    s00 sp1 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:24:56  evals   H8    s00 sp2 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:25:13  evals   H8    s00 sp3 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:25:29  evals   H8    s00 sp4 16.7s n={'train': 66, 'val': 12, 'test': 18}
+20:25:29  dataset H8    s01 cached 0.0s ds_H8_s01_e96.json
+20:25:46  evals   H8    s01 sp0 16.8s n={'train': 66, 'val': 12, 'test': 18}
+20:26:03  evals   H8    s01 sp1 16.8s n={'train': 66, 'val': 12, 'test': 18}
+20:26:20  evals   H8    s01 sp2 16.8s n={'train': 66, 'val': 12, 'test': 18}
+20:26:37  evals   H8    s01 sp3 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:26:53  evals   H8    s01 sp4 16.5s n={'train': 66, 'val': 12, 'test': 18}
+20:28:02  dataset H8    s02 GEN  69.1s ds_H8_s02_e96.json
+20:28:13  evals   H8    s02 sp0 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:28:23  evals   H8    s02 sp1 10.5s n={'train': 66, 'val': 12, 'test': 18}
+20:28:34  evals   H8    s02 sp2 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:28:45  evals   H8    s02 sp3 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:28:56  evals   H8    s02 sp4 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:30:05  dataset H8    s03 GEN  68.7s ds_H8_s03_e96.json
+20:30:15  evals   H8    s03 sp0 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:30:26  evals   H8    s03 sp1 10.5s n={'train': 66, 'val': 12, 'test': 18}
+20:30:37  evals   H8    s03 sp2 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:30:47  evals   H8    s03 sp3 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:30:58  evals   H8    s03 sp4 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:32:06  dataset H8    s04 GEN  68.4s ds_H8_s04_e96.json
+20:32:17  evals   H8    s04 sp0 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:32:28  evals   H8    s04 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:32:39  evals   H8    s04 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:32:49  evals   H8    s04 sp3 10.4s n={'train': 66, 'val': 12, 'test': 18}
+20:33:00  evals   H8    s04 sp4 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:34:10  dataset H8    s05 GEN  70.6s ds_H8_s05_e96.json
+20:34:27  evals   H8    s05 sp0 16.2s n={'train': 66, 'val': 12, 'test': 18}
+20:34:37  evals   H8    s05 sp1 10.2s n={'train': 66, 'val': 12, 'test': 18}
+20:34:47  evals   H8    s05 sp2 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:34:57  evals   H8    s05 sp3 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:35:07  evals   H8    s05 sp4 10.2s n={'train': 66, 'val': 12, 'test': 18}
+20:36:13  dataset H8    s06 GEN  65.5s ds_H8_s06_e96.json
+20:36:23  evals   H8    s06 sp0 10.0s n={'train': 66, 'val': 12, 'test': 18}
+20:36:33  evals   H8    s06 sp1 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:36:43  evals   H8    s06 sp2 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:36:53  evals   H8    s06 sp3 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:37:04  evals   H8    s06 sp4 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:38:13  dataset H8    s07 GEN  68.4s ds_H8_s07_e96.json
+20:38:24  evals   H8    s07 sp0 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:38:34  evals   H8    s07 sp1 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:38:45  evals   H8    s07 sp2 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:38:56  evals   H8    s07 sp3 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:39:07  evals   H8    s07 sp4 11.1s n={'train': 66, 'val': 12, 'test': 18}
+20:40:16  dataset H8    s08 GEN  69.0s ds_H8_s08_e96.json
+20:40:27  evals   H8    s08 sp0 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:40:38  evals   H8    s08 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:40:49  evals   H8    s08 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:40:59  evals   H8    s08 sp3 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:41:10  evals   H8    s08 sp4 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:42:17  dataset H8    s09 GEN  67.5s ds_H8_s09_e96.json
+20:42:28  evals   H8    s09 sp0 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:42:39  evals   H8    s09 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:42:49  evals   H8    s09 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:43:00  evals   H8    s09 sp3 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:43:11  evals   H8    s09 sp4 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:44:44  dataset H8    s10 GEN  92.6s ds_H8_s10_e96.json
+20:45:00  evals   H8    s10 sp0 16.3s n={'train': 66, 'val': 12, 'test': 18}
+20:45:16  evals   H8    s10 sp1 15.8s n={'train': 66, 'val': 12, 'test': 18}
+20:45:31  evals   H8    s10 sp2 15.6s n={'train': 66, 'val': 12, 'test': 18}
+20:45:47  evals   H8    s10 sp3 15.8s n={'train': 66, 'val': 12, 'test': 18}
+20:46:03  evals   H8    s10 sp4 15.6s n={'train': 66, 'val': 12, 'test': 18}
+20:47:27  dataset H8    s11 GEN  84.4s ds_H8_s11_e96.json
+20:47:37  evals   H8    s11 sp0 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:47:47  evals   H8    s11 sp1 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:47:57  evals   H8    s11 sp2 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:48:07  evals   H8    s11 sp3 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:48:18  evals   H8    s11 sp4 10.5s n={'train': 66, 'val': 12, 'test': 18}
+20:48:18  suite done: 60 evaluations written, 0 skipped (cached), 10 datasets generated, 0 errors, 24.2 min

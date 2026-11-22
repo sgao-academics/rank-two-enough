@@ -1,0 +1,7 @@
+﻿sim                    : mujoco:push3d
+process A max|dpose|   : 5.929054e-11   class DETERMINISTIC
+process B max|dpose|   : 5.929054e-11   class DETERMINISTIC
+per_run_max identical  : True
+classification equal   : True
+fingerprint differences: none
+VERDICT: PASS

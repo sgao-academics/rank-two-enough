@@ -1,0 +1,55 @@
+﻿==============================================================================
+pilot: 48 episodes x 15 decision points, K=5 H=3 rule=R-samp
+adapter: mujoco:push3d | mujoco 3.17.0
+==============================================================================
+phi_ref = 0.195811   obs_dim = 22   degenerate(eps=1e-06)
+split  : {'train': 30, 'val': 12, 'test': 6} | templates t/v/te = 10 2 4
+leak   : OK
+fit on 30 train episodes, score on 6 test episodes
+horizon  : 1-step vs 3-step rank rho=0.905 | identical ranking 73.9% | same argmax 88.1%  (n=720 steps)
+
+--- convention C (closed loop [primary]) ---
+   RolloutTable(steps=90, K=5, episodes=6, degenerate=0.0%)
+   observation-only (what a method must beat):
+predictor                         DAR     nMAE   regret      rho     deg%
+-------------------------------------------------------------------------
+B0 no-effect                   0.0000   1.5612   1.0000     -         0.0
+B1 bet-on-expert               0.6611   1.5313   1.0000     -         0.0
+B2 ridge surrogate             0.4639   1.6727   8.4117  -0.3933      0.0
+C1 ridge arm-shuffled (control 0.4472   1.5992   9.9677  -0.2356      0.0
+   references (need the simulator or the truth -- not methods):
+   R1 one-step oracle (model-base DAR=0.9667  nMAE= 0.6503  regret= 0.0456  rho=+0.9556
+   REF oracle (ceiling, not a met DAR=1.0000  nMAE= 0.0000  regret= 0.0000
+   REF chance (permuted truth)    DAR=0.4998 +- 0.0271 over 200 permutations (p+=0.339)
+
+--- convention O (open loop [secondary]) ---
+   RolloutTable(steps=90, K=5, episodes=6, degenerate=0.0%)
+   observation-only (what a method must beat):
+predictor                         DAR     nMAE   regret      rho     deg%
+-------------------------------------------------------------------------
+B0 no-effect                   0.0000   1.5551   1.0000     -         0.0
+B1 bet-on-expert               0.6556   1.5304   1.0000     -         0.0
+B2 ridge surrogate             0.4528   1.6653   6.8917  -0.4333      0.0
+C1 ridge arm-shuffled (control 0.4917   1.5818   7.5921  -0.2689      0.0
+   references (need the simulator or the truth -- not methods):
+   R1 one-step oracle (model-base DAR=0.9611  nMAE= 0.7402  regret= 0.3035  rho=+0.9511
+   REF oracle (ceiling, not a met DAR=1.0000  nMAE= 0.0000  regret= 0.0000
+   REF chance (permuted truth)    DAR=0.5001 +- 0.0280 over 200 permutations (p+=0.344)
+   identity check   : max |R1 delta - y_S delta| = 3.32e-11  (Gate-0 tol 1e-9)
+
+=== pipeline checks ===
+  [PASS] oracle DAR == 1 on eval split
+  [PASS] oracle regret == 0 on eval split
+  [PASS] no-effect DAR == 0
+  [PASS] chance is measured, not assumed
+  [PASS] negative control sits at chance
+  [PASS] signs are mixed (a direction metric needs both)
+  [PASS] split has no leak
+  [PASS] train and eval splits are disjoint
+  [PASS] both conventions generated
+  [PASS] degenerate ratio below no-signal threshold
+  [PASS] Gate-2 ruler passed
+  [PASS] one-step oracle delta == 1-step truth delta
+
+written: D:\counterfactual-plan-ranking\05_Logs\pilot_rsamp_48ep_test.json
+dataset: D:\counterfactual-plan-ranking\04_Data\pilot_48ep.json

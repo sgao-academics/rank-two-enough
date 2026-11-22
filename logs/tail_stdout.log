@@ -1,0 +1,17 @@
+tail scan start: m=3, T=15, K=5, sigma=0.8, 96 episodes, dataset seed 0
+H= 4  GEN     ds_H04_m3.json
+H= 4 tail= 25.0%  degen= 0.4%  scalarR2=0.8730  fullR2=0.8937  gain=+0.0207  order= 83.9% (31 pairs)
+H= 5  GEN     ds_H05_m3.json
+H= 5 tail= 40.0%  degen= 0.0%  scalarR2=0.8478  fullR2=0.8742  gain=+0.0264  order= 80.6% (31 pairs)
+H= 6  GEN     ds_H06_m3.json
+H= 6 tail= 50.0%  degen= 0.0%  scalarR2=0.8172  fullR2=0.8504  gain=+0.0331  order= 87.1% (31 pairs)
+H= 7  GEN     ds_H07_m3.json
+H= 7 tail= 57.1%  degen= 0.0%  scalarR2=0.7831  fullR2=0.8249  gain=+0.0418  order= 83.9% (31 pairs)
+H= 8  GEN     ds_H08_m3.json
+H= 8 tail= 62.5%  degen= 0.0%  scalarR2=0.7472  fullR2=0.7993  gain=+0.0520  order= 83.9% (31 pairs)
+H= 9  GEN     ds_H09_m3.json
+H= 9 tail= 66.7%  degen= 0.0%  scalarR2=0.7119  fullR2=0.7748  gain=+0.0628  order= 83.9% (31 pairs)
+H=10  GEN     ds_H10_m3.json
+H=10 tail= 70.0%  degen= 0.0%  scalarR2=0.6772  fullR2=0.7509  gain=+0.0738  order= 87.1% (31 pairs)
+wrote D:\counterfactual-plan-ranking\05_Logs\tail_scan\tail_scan.csv
+corr(tail, scalarR2) = -0.9511   corr(tail, gain) = +0.9290

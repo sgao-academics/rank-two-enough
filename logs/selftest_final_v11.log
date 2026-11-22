@@ -1,0 +1,72 @@
+﻿==============================================================================
+counterfactual-plan-ranking self-test -- metrics.py (spec 1.1) + gate0_replay.py
+==============================================================================
+interpreter : D:\Miniconda3\envs\torch-cuda128\python.exe
+python      : 3.12.13
+numpy       : 2.4.3
+scipy       : 1.17.1
+base table: RolloutTable(steps=360, K=5, episodes=12, degenerate=0.0%)
+
+A. Gate-2 ruler self-test (spec gate 2)
+  [PASS] oracle -> DAR = 1.0                            dar=1.000000
+  [PASS] oracle -> nMAE = 0                             nmae=0.00e+00
+  [PASS] oracle -> regret_norm = 0                      regret=0.00e+00
+  [PASS] chance -> DAR in [0.40, 0.60]                  dar=0.4903
+  [PASS] chance -> |rho| <= 0.10                        rho=-0.0008
+  [PASS] chance -> regret_norm > 0                      regret=1.3165
+  [PASS] Gate-2 overall                                 
+
+B. estimator identities
+  [PASS] constant offset cancels in Delta               dar=1.0000 mae=2.24e-17
+  [PASS] doubling -> DAR 1, nMAE ~ 1                    dar=1.0000 nmae=0.997
+  [PASS] 'no effect' prediction -> DAR = 0              dar=0.0000
+  [PASS] eps above all effects -> undecidable 1.0       undecidable=1.00 dar=nan
+  [PASS] all-degenerate -> primary DAR is null          value=None
+  [PASS] all-degenerate -> inclusive variant still computed value=1.000
+  [PASS] point estimate inside its own 95% CI           
+  [PASS] report carries spec_version + cluster unit     N=12 episodes, 360 steps
+
+C. diagnosis, recovery, intervention locality
+  [PASS] Hit@1 = 1/3                                    hit@1=0.3333
+  [PASS] MRR = (1 + 1/2 + 0)/3 = 0.5                    mrr=0.5000
+  [PASS] recovery reports all three arms                ours=0.48 rand=0.30 oracle=0.93
+  [PASS] delta_vs_random CI excludes 0                  CI=[0.085, 0.285]
+  [PASS] Gate-1 accepts local intervention              max_non_nb=0.0040 tol=0.010
+  [PASS] Gate-1 rejects leaking intervention            max_non_nb=0.5000
+
+C2. rank statistics (scipy-backed)
+  [PASS] scipy importable                               scipy=1.17.1
+  [PASS] average ranks on ties -> [1.5,1.5,3,4]         ranks=[1.5, 1.5, 3.0, 4.0]
+  [PASS] tau-b on tied identical rows = 1.0             tau=1.000000
+  [PASS] tau-b on tied reversed rows = -1.0             tau=-1.000000
+  [PASS] tau-b on 200 tied steps stays in [-1,1]        max|tau|=1.0000 (hand-rolled version reached |tau|>4)
+  [PASS] rho on 200 tied steps stays in [-1,1]          max|rho|=1.0000
+
+D. Gate-0 replay determinism (mock simulators)
+  [PASS] mock:det -> DETERMINISTIC                      got DETERMINISTIC max=0.00e+00 slope=0.00e+00
+  [PASS] mock:noisy -> STABLE_STOCHASTIC                got STABLE_STOCHASTIC max=1.70e-05 slope=-3.39e-08
+  [PASS] mock:drift -> DRIFTING                         got DRIFTING max=1.15e+00 slope=4.32e-02
+  [PASS] noise floor on deterministic sim is ~0         eps=0.00e+00
+  [PASS] noise floor on noisy sim is > 0                eps=7.09e-04
+
+E. real engine adapter (skipped if mujoco is absent)
+  [PASS] adapter builds and returns (4,7) poses         shape=(4, 7)
+  [PASS] outcome in (0,1] at reset                      y=0.3432
+  [PASS] outcome strictly decreases with distance (no plateau) 0.5307->0.3817->0.2445->0.1422
+  [PASS] two instances agree bit-for-bit                max|diff|=0.00e+00
+  [PASS] real engine classified DETERMINISTIC           got DETERMINISTIC max=4.66e-13
+  [PASS] causalworld adapter refuses loudly when blocked factory entries=0
+
+F. data pipeline (sampler + split)
+  [PASS] dataset generation is bit-reproducible         rebuilt twice from the same factors
+  [PASS] arm 0 identical under C and O (it is the factual arm) n_steps=8
+  [PASS] C and O disagree on counterfactual arms        4/8 steps differ
+  [PASS] potential rise -> positive Y, fall -> negative Y up=0.3333 down=-0.3333
+  [PASS] Y magnitudes are on the phi_ref scale (not raw phi) max|Y|=0.1019 on 32 arms
+  [PASS] records round-trip into a dense table          rows=40 table=(8, 5)
+  [PASS] split report has no template/instance leak     templates t/v/te=1/0/1
+
+==============================================================================
+TOTAL 45 checks, 0 failed
+VERDICT: PASS
+==============================================================================

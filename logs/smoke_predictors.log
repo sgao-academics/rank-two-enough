@@ -1,0 +1,11 @@
+﻿B3 ridge first-step only         DAR=0.4889 regret=2.3400 nMAE=1.158  tc=C
+B4 ridge poly2                   DAR=0.9333 regret=0.0390 nMAE=0.279  tc=C
+L1 learned one-step (linear)     DAR=0.2444 regret=2.8758 nMAE=1.128  tc=S
+L2 learned one-step (frame)      DAR=0.8444 regret=0.2454 nMAE=0.898  tc=S
+M1 L0                            DAR=0.8722 regret=0.2429 nMAE=0.526  tc=C
+M1 L3                            DAR=0.9361 regret=0.1218 nMAE=0.399  tc=C
+M1 L3 transfer                   DAR=0.9361 regret=0.1218 nMAE=0.399  tc=C
+C2 shuffled                      DAR=0.9139 regret=0.1317 nMAE=0.909  tc=C
+
+design widths: linear=32  poly2=560  M1-L3=15
+level block arm-constant: True

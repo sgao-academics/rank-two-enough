@@ -1,0 +1,8 @@
+﻿sub=5   sig=0.5 | within=6.44e-04 between=3.04e-02 ratio=0.021 | upside=3.11e-04 | min|da|=0.29 | clipped 23% | myopic upside=2.36e-05
+sub=5   sig=0.8 | within=8.75e-04 between=3.04e-02 ratio=0.029 | upside=3.36e-04 | min|da|=0.33 | clipped 32% | myopic upside=2.56e-05
+sub=5   sig=1.2 | within=1.28e-03 between=3.04e-02 ratio=0.042 | upside=4.02e-04 | min|da|=0.36 | clipped 41% | myopic upside=3.76e-05
+sub=5   sig=1.6 | within=1.53e-03 between=3.04e-02 ratio=0.050 | upside=4.36e-04 | min|da|=0.37 | clipped 49% | myopic upside=3.99e-05
+sub=50  sig=0.5 | within=2.65e-03 between=1.03e-02 ratio=0.258 | upside=4.61e-04 | min|da|=0.30 | clipped 22% | myopic upside=7.99e-05
+sub=50  sig=0.8 | within=3.85e-03 between=1.03e-02 ratio=0.375 | upside=7.38e-04 | min|da|=0.33 | clipped 31% | myopic upside=1.12e-04
+sub=50  sig=1.2 | within=4.56e-03 between=1.03e-02 ratio=0.443 | upside=7.60e-04 | min|da|=0.37 | clipped 41% | myopic upside=1.49e-04
+sub=50  sig=1.6 | within=5.33e-03 between=1.03e-02 ratio=0.518 | upside=7.88e-04 | min|da|=0.37 | clipped 49% | myopic upside=1.49e-04

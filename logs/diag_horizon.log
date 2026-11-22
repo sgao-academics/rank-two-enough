@@ -1,0 +1,13 @@
+﻿steps: 720  K: 5
+
+1-step vs 3-step (closed loop)
+  steps with a defined ranking : 720 / 720
+  Spearman: mean +0.9050  median +1.0000  min -1.0000  frac==1.0 0.739
+  argmax agreement             : 0.881
+
+myopic probe vs 3-step (closed loop)
+  Spearman: mean +0.9050  median +1.0000  min -1.0000  frac==1.0 0.739
+  argmax agreement             : 0.881
+
+Delta(3-step) vs Delta(1-step): corr = 0.9035  (n=2880)
+slope: 1.403

@@ -1,0 +1,12 @@
+# unpacked copies of the compressed payload (see tools/unpack.py)
+data/*.json
+data/**/*.json
+logs/suite/**/*.json
+logs/tail_scan/**/*.json
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/

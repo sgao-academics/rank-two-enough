@@ -1,0 +1,4 @@
+﻿sigma=0.8 | 1-vs-3step rho=0.924  same-argmax=0.875 | p+=0.26 | H1-oracle DAR=0.948 | within=3.36e-03
+sigma=1.6 | 1-vs-3step rho=0.926  same-argmax=0.875 | p+=0.22 | H1-oracle DAR=0.951 | within=5.09e-03
+sigma=2.4 | 1-vs-3step rho=0.920  same-argmax=0.875 | p+=0.22 | H1-oracle DAR=0.943 | within=6.36e-03
+sigma=3.2 | 1-vs-3step rho=0.943  same-argmax=0.875 | p+=0.22 | H1-oracle DAR=0.951 | within=6.77e-03

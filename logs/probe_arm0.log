@@ -1,0 +1,14 @@
+﻿=== plan_len = 1 ===
+factual_plan: phi_end = 0.128257480395507
+C path     : phi_end = 0.128257480395507   |diff| = 3.886e-16
+O path     : phi_end = 0.128257480395507   |diff| = 1.388e-16
+policy replay matches stored fact_actions: max|da| = 4.072e-14
+policy replay phi_end = 0.128257480395506 |diff| = 8.327e-17
+
+=== plan_len = 3 ===
+factual_plan: phi_end = 0.128257480395507
+C path     : phi_end = 0.128257480395507   |diff| = 3.886e-16
+O path     : phi_end = 0.128257480395507   |diff| = 1.388e-16
+policy replay matches stored fact_actions: max|da| = 4.072e-14
+policy replay phi_end = 0.128257480395506 |diff| = 8.327e-17
+

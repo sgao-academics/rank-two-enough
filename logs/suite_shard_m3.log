@@ -1,0 +1,6 @@
+20:17:36  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:17:36  dataset m3    s00 cached 0.0s ds_m3_s00_e96.json
+20:21:07  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:21:07  dataset m3    s00 cached 0.0s ds_m3_s00_e96.json
+20:24:06  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:24:06  dataset m3    s00 cached 0.0s ds_m3_s00_e96.json

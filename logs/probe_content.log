@@ -1,0 +1,8 @@
+﻿sub=5   sigma=0.6 | within=1.93e-04 between=2.98e-02 ratio=0.006 | upside=3.51e-04 | argmax!=0 100% | gain>eps 100% | |a-a0|=664.0mm | clipped 42%
+sub=5   sigma=1.5 | within=3.57e-04 between=2.98e-02 ratio=0.012 | upside=6.97e-04 | argmax!=0 100% | gain>eps 100% | |a-a0|=1097.7mm | clipped 59%
+sub=5   sigma=3.0 | within=5.94e-04 between=2.98e-02 ratio=0.020 | upside=8.56e-04 | argmax!=0 100% | gain>eps 100% | |a-a0|=1330.0mm | clipped 70%
+sub=5   sigma=5.0 | within=7.49e-04 between=2.98e-02 ratio=0.025 | upside=1.03e-03 | argmax!=0 100% | gain>eps 100% | |a-a0|=1351.6mm | clipped 76%
+sub=50  sigma=0.6 | within=5.68e-04 between=1.13e-02 ratio=0.050 | upside=6.06e-04 | argmax!=0 94% | gain>eps 94% | |a-a0|=711.4mm | clipped 33%
+sub=50  sigma=1.5 | within=1.55e-03 between=1.13e-02 ratio=0.137 | upside=9.69e-04 | argmax!=0 92% | gain>eps 92% | |a-a0|=1123.2mm | clipped 56%
+sub=50  sigma=3.0 | within=2.08e-03 between=1.13e-02 ratio=0.184 | upside=1.29e-03 | argmax!=0 89% | gain>eps 89% | |a-a0|=1373.6mm | clipped 66%
+sub=50  sigma=5.0 | within=2.78e-03 between=1.13e-02 ratio=0.247 | upside=1.29e-03 | argmax!=0 89% | gain>eps 89% | |a-a0|=1388.0mm | clipped 74%

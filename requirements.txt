@@ -1,0 +1,7 @@
+# Verified with python 3.12.13 on the machine that produced the results:
+#   numpy 2.4.3, scipy 1.17.1, mujoco 3.x
+# The analysis scripts (rank curves, order test, block decomposition) need only
+# numpy and scipy; mujoco is required to regenerate datasets or evaluations.
+numpy>=2.0
+scipy>=1.11
+mujoco>=3.1

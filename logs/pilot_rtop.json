@@ -1,0 +1,322 @@
+{
+ "meta": {
+  "spec_version": "1.1",
+  "K": 5,
+  "H": 3,
+  "T": 15,
+  "rule": "R-top",
+  "phi_ref": 0.2799350231703044,
+  "eps_degen": 1e-06,
+  "config": {
+   "K": 5,
+   "H": 3,
+   "T": 15,
+   "warmup": 6,
+   "rule": "R-top",
+   "n_cand": 8,
+   "proposal_sigma": 0.6,
+   "eps_degen": 1e-06,
+   "seed": 0
+  },
+  "adapter": {
+   "sim": "mujoco",
+   "mujoco_version": "3.17.0",
+   "scene": "push3d (CausalWorld-style factorisation)",
+   "timestep": 0.002,
+   "substeps_per_control_step": 5,
+   "control_dt": 0.01,
+   "integrator": "Euler",
+   "cone": "pyramidal",
+   "solver": 2,
+   "solver_iterations": 100,
+   "noslip_iterations": 0,
+   "n_joint_dof": 15,
+   "n_bodies": 4,
+   "causal_factors": {
+    "object_mass": 0.04649479162469679,
+    "object_half_size": 0.023549422121833502,
+    "sliding_friction": 0.699649170339743,
+    "target_xy": [
+     -0.1297565268432453,
+     -0.11951973598657302
+    ],
+    "distractor_xy": [
+     -0.10673263817726088,
+     0.12766837467267123
+    ]
+   }
+  },
+  "conventions": {
+   "primary": "C_closed_loop",
+   "secondary": "O_open_loop",
+   "diagnostic_only": "S_one_step"
+  },
+  "base_policy": "scripted_frozen_expert (NOT a learned policy)",
+  "split": {
+   "seed": 0,
+   "on": "template",
+   "report": {
+    "ok": true,
+    "n_train_templates": 10,
+    "n_val_templates": 2,
+    "n_test_templates": 4,
+    "template_leak": [],
+    "instance_leak": [],
+    "unseen_object_combination_rate": 1.0,
+    "n_episodes": {
+     "train": 30,
+     "val": 12,
+     "test": 6
+    },
+    "counts": 48
+   }
+  }
+ },
+ "leak": {
+  "ok": true,
+  "n_train_templates": 10,
+  "n_val_templates": 2,
+  "n_test_templates": 4,
+  "template_leak": [],
+  "instance_leak": [],
+  "unseen_object_combination_rate": 1.0,
+  "n_episodes": {
+   "train": 30,
+   "val": 12,
+   "test": 6
+  },
+  "counts": 48
+ },
+ "checks": {
+  "no-effect DAR == 0": true,
+  "oracle DAR == 1": true,
+  "oracle regret == 0": true,
+  "shuffled DAR near permutation chance": true,
+  "Gate-2 ruler passed": true,
+  "signs are mixed (a direction metric needs both)": true,
+  "split has no leak": true,
+  "open-loop convention generated": true,
+  "degenerate ratio below no-signal threshold": true
+ },
+ "results": {
+  "C": {
+   "table": "RolloutTable(steps=720, K=5, episodes=48, degenerate=1.8%)",
+   "ruler": {
+    "passed": true,
+    "oracle": {
+     "dar": 1.0,
+     "nmae": 0.0,
+     "regret_norm": 0.0,
+     "zero_regret_rate": 1.0,
+     "ok": true
+    },
+    "chance": {
+     "dar": 0.46711568938193343,
+     "dar_perm_mean": 0.4695879556259905,
+     "dar_perm_sd": 0.011180202294910641,
+     "rho": -0.0025912391373086353,
+     "p_positive": 0.5427892234548336,
+     "regret_norm": 3.34156655634641,
+     "permutations": 200,
+     "accepted_band": [
+      0.25,
+      0.75
+     ],
+     "ok": true,
+     "permuted": "y_true"
+    }
+   },
+   "noeffect": {
+    "label": "no-effect (y_pred = factual arm)",
+    "dar": 0.0,
+    "dar_ci95": [
+     0.0,
+     0.0
+    ],
+    "nmae": 2.3748684143096543,
+    "nmae_ci95": [
+     1.747608398670002,
+     3.2618042762504986
+    ],
+    "regret_norm": 1.0,
+    "regret_norm_ci95": [
+     1.0,
+     1.0
+    ],
+    "rho": null,
+    "undecidable_rate": 0.10749646393210754,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   },
+   "degenerate_ratio": 0.018055555555555554,
+   "oracle": {
+    "label": "oracle (y_pred = y_true)",
+    "dar": 1.0,
+    "dar_ci95": [
+     1.0,
+     1.0
+    ],
+    "nmae": 0.0,
+    "nmae_ci95": [
+     0.0,
+     0.0
+    ],
+    "regret_norm": 0.0,
+    "regret_norm_ci95": [
+     0.0,
+     0.0
+    ],
+    "rho": 1.0,
+    "undecidable_rate": 0.10749646393210754,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   },
+   "shuffled": {
+    "label": "shuffled arms (chance)",
+    "dar": 0.46513470681458,
+    "dar_ci95": [
+     0.4495958414239482,
+     0.4846699029126214
+    ],
+    "nmae": 3.1483060899013826,
+    "nmae_ci95": [
+     2.389703603196767,
+     4.1733232507147875
+    ],
+    "regret_norm": 2.8864628308428704,
+    "regret_norm_ci95": [
+     1.1845635362739495,
+     6.348411215216397
+    ],
+    "rho": 0.011557289531703882,
+    "undecidable_rate": 0.10749646393210754,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   }
+  },
+  "O": {
+   "table": "RolloutTable(steps=720, K=5, episodes=48, degenerate=1.8%)",
+   "ruler": {
+    "passed": true,
+    "oracle": {
+     "dar": 1.0,
+     "nmae": 0.0,
+     "regret_norm": 0.0,
+     "zero_regret_rate": 1.0,
+     "ok": true
+    },
+    "chance": {
+     "dar": 0.46853977047882867,
+     "dar_perm_mean": 0.4695805302730511,
+     "dar_perm_sd": 0.011030067883367783,
+     "rho": -0.002709361890466555,
+     "p_positive": 0.5449149188761377,
+     "regret_norm": 3.318091892169736,
+     "permutations": 200,
+     "accepted_band": [
+      0.25,
+      0.75
+     ],
+     "ok": true,
+     "permuted": "y_true"
+    }
+   },
+   "noeffect": {
+    "label": "no-effect (y_pred = factual arm)",
+    "dar": 0.0,
+    "dar_ci95": [
+     0.0,
+     0.0
+    ],
+    "nmae": 2.3874206507993367,
+    "nmae_ci95": [
+     1.7554938423310227,
+     3.2449017420882442
+    ],
+    "regret_norm": 1.0,
+    "regret_norm_ci95": [
+     1.0,
+     1.0
+    ],
+    "rho": null,
+    "undecidable_rate": 0.10643564356435642,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   },
+   "degenerate_ratio": 0.018055555555555554,
+   "oracle": {
+    "label": "oracle (y_pred = y_true)",
+    "dar": 1.0,
+    "dar_ci95": [
+     1.0,
+     1.0
+    ],
+    "nmae": 0.0,
+    "nmae_ci95": [
+     0.0,
+     0.0
+    ],
+    "regret_norm": 0.0,
+    "regret_norm_ci95": [
+     0.0,
+     0.0
+    ],
+    "rho": 1.0,
+    "undecidable_rate": 0.10643564356435642,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   },
+   "shuffled": {
+    "label": "shuffled arms (chance)",
+    "dar": 0.46616541353383456,
+    "dar_ci95": [
+     0.45065144577693017,
+     0.4866700310559006
+    ],
+    "nmae": 3.1736679715674327,
+    "nmae_ci95": [
+     2.400292193502611,
+     4.181051462074694
+    ],
+    "regret_norm": 2.953475309652653,
+    "regret_norm_ci95": [
+     1.167897831012618,
+     6.2394139888181055
+    ],
+    "rho": 0.008168677570834825,
+    "undecidable_rate": 0.10643564356435642,
+    "nontrivial_step_rate": 0.8316831683168316,
+    "eps": 1e-06,
+    "eps_source": "caller",
+    "n_episodes": 48,
+    "n_steps": 720
+   }
+  }
+ },
+ "config": {
+  "K": 5,
+  "H": 3,
+  "T": 15,
+  "warmup": 6,
+  "rule": "R-top",
+  "n_cand": 8,
+  "proposal_sigma": 0.6,
+  "eps_degen": 1e-06,
+  "seed": 0
+ }
+}

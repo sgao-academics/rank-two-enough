@@ -1,0 +1,100 @@
+20:17:36  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:18:30  dataset sig04 s00 GEN  53.4s ds_sig04_s00_e96.json
+20:18:35  evals   sig04 s00 sp0 5.6s n={'train': 60, 'val': 24, 'test': 12}
+20:18:43  evals   sig04 s00 sp1 8.0s n={'train': 66, 'val': 12, 'test': 18}
+20:18:49  evals   sig04 s00 sp2 5.9s n={'train': 78, 'val': 6, 'test': 12}
+20:18:53  evals   sig04 s00 sp3 3.3s n={'train': 66, 'val': 24, 'test': 6}
+20:19:05  evals   sig04 s00 sp4 12.4s n={'train': 66, 'val': 0, 'test': 30}
+20:19:59  dataset sig04 s01 GEN  53.7s ds_sig04_s01_e96.json
+20:20:05  evals   sig04 s01 sp0 5.7s n={'train': 60, 'val': 24, 'test': 12}
+20:20:13  evals   sig04 s01 sp1 8.3s n={'train': 66, 'val': 12, 'test': 18}
+20:20:19  evals   sig04 s01 sp2 6.0s n={'train': 78, 'val': 6, 'test': 12}
+20:20:22  evals   sig04 s01 sp3 3.5s n={'train': 66, 'val': 24, 'test': 6}
+20:20:35  evals   sig04 s01 sp4 12.6s n={'train': 66, 'val': 0, 'test': 30}
+20:21:07  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:21:07  dataset sig04 s00 cached 0.0s ds_sig04_s00_e96.json
+20:21:19  evals   sig04 s00 sp0 12.2s n={'train': 66, 'val': 12, 'test': 18}
+20:21:31  evals   sig04 s00 sp1 12.3s n={'train': 66, 'val': 12, 'test': 18}
+20:21:44  evals   sig04 s00 sp2 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:21:56  evals   sig04 s00 sp3 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:22:09  evals   sig04 s00 sp4 12.4s n={'train': 66, 'val': 12, 'test': 18}
+20:22:09  dataset sig04 s01 cached 0.0s ds_sig04_s01_e96.json
+20:22:21  evals   sig04 s01 sp0 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:34  evals   sig04 s01 sp1 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:46  evals   sig04 s01 sp2 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:22:59  evals   sig04 s01 sp3 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:23:11  evals   sig04 s01 sp4 12.5s n={'train': 66, 'val': 12, 'test': 18}
+20:24:06  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:24:06  dataset sig04 s00 cached 0.0s ds_sig04_s00_e96.json
+20:24:23  evals   sig04 s00 sp0 16.5s n={'train': 66, 'val': 12, 'test': 18}
+20:24:40  evals   sig04 s00 sp1 16.7s n={'train': 66, 'val': 12, 'test': 18}
+20:24:56  evals   sig04 s00 sp2 16.7s n={'train': 66, 'val': 12, 'test': 18}
+20:25:13  evals   sig04 s00 sp3 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:25:29  evals   sig04 s00 sp4 16.5s n={'train': 66, 'val': 12, 'test': 18}
+20:25:29  dataset sig04 s01 cached 0.0s ds_sig04_s01_e96.json
+20:25:46  evals   sig04 s01 sp0 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:26:03  evals   sig04 s01 sp1 16.5s n={'train': 66, 'val': 12, 'test': 18}
+20:26:19  evals   sig04 s01 sp2 16.7s n={'train': 66, 'val': 12, 'test': 18}
+20:26:36  evals   sig04 s01 sp3 16.4s n={'train': 66, 'val': 12, 'test': 18}
+20:26:52  evals   sig04 s01 sp4 16.3s n={'train': 66, 'val': 12, 'test': 18}
+20:27:48  dataset sig04 s02 GEN  55.6s ds_sig04_s02_e96.json
+20:27:58  evals   sig04 s02 sp0 10.5s n={'train': 66, 'val': 12, 'test': 18}
+20:28:09  evals   sig04 s02 sp1 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:28:19  evals   sig04 s02 sp2 10.5s n={'train': 66, 'val': 12, 'test': 18}
+20:28:30  evals   sig04 s02 sp3 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:28:41  evals   sig04 s02 sp4 11.0s n={'train': 66, 'val': 12, 'test': 18}
+20:29:36  dataset sig04 s03 GEN  54.9s ds_sig04_s03_e96.json
+20:29:47  evals   sig04 s03 sp0 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:29:57  evals   sig04 s03 sp1 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:30:08  evals   sig04 s03 sp2 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:30:19  evals   sig04 s03 sp3 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:30:30  evals   sig04 s03 sp4 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:31:24  dataset sig04 s04 GEN  54.4s ds_sig04_s04_e96.json
+20:31:35  evals   sig04 s04 sp0 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:31:45  evals   sig04 s04 sp1 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:31:56  evals   sig04 s04 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:32:07  evals   sig04 s04 sp3 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:32:18  evals   sig04 s04 sp4 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:33:12  dataset sig04 s05 GEN  54.1s ds_sig04_s05_e96.json
+20:33:22  evals   sig04 s05 sp0 10.6s n={'train': 66, 'val': 12, 'test': 18}
+20:33:33  evals   sig04 s05 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:33:43  evals   sig04 s05 sp2 10.3s n={'train': 66, 'val': 12, 'test': 18}
+20:33:54  evals   sig04 s05 sp3 10.3s n={'train': 66, 'val': 12, 'test': 18}
+20:34:07  evals   sig04 s05 sp4 12.9s n={'train': 66, 'val': 12, 'test': 18}
+20:35:05  dataset sig04 s06 GEN  58.7s ds_sig04_s06_e96.json
+20:35:15  evals   sig04 s06 sp0 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:35:26  evals   sig04 s06 sp1 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:35:36  evals   sig04 s06 sp2 10.2s n={'train': 66, 'val': 12, 'test': 18}
+20:35:46  evals   sig04 s06 sp3 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:35:56  evals   sig04 s06 sp4 10.1s n={'train': 66, 'val': 12, 'test': 18}
+20:36:48  dataset sig04 s07 GEN  52.2s ds_sig04_s07_e96.json
+20:36:59  evals   sig04 s07 sp0 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:37:10  evals   sig04 s07 sp1 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:37:21  evals   sig04 s07 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:37:31  evals   sig04 s07 sp3 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:37:42  evals   sig04 s07 sp4 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:38:37  dataset sig04 s08 GEN  54.8s ds_sig04_s08_e96.json
+20:38:48  evals   sig04 s08 sp0 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:38:59  evals   sig04 s08 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:39:10  evals   sig04 s08 sp2 11.0s n={'train': 66, 'val': 12, 'test': 18}
+20:39:21  evals   sig04 s08 sp3 11.1s n={'train': 66, 'val': 12, 'test': 18}
+20:39:32  evals   sig04 s08 sp4 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:40:26  dataset sig04 s09 GEN  54.7s ds_sig04_s09_e96.json
+20:40:37  evals   sig04 s09 sp0 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:40:48  evals   sig04 s09 sp1 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:40:59  evals   sig04 s09 sp2 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:41:09  evals   sig04 s09 sp3 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:41:20  evals   sig04 s09 sp4 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:42:14  dataset sig04 s10 GEN  53.7s ds_sig04_s10_e96.json
+20:42:25  evals   sig04 s10 sp0 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:42:35  evals   sig04 s10 sp1 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:42:46  evals   sig04 s10 sp2 10.8s n={'train': 66, 'val': 12, 'test': 18}
+20:42:57  evals   sig04 s10 sp3 10.7s n={'train': 66, 'val': 12, 'test': 18}
+20:43:08  evals   sig04 s10 sp4 10.9s n={'train': 66, 'val': 12, 'test': 18}
+20:44:19  dataset sig04 s11 GEN  71.1s ds_sig04_s11_e96.json
+20:44:36  evals   sig04 s11 sp0 16.6s n={'train': 66, 'val': 12, 'test': 18}
+20:44:52  evals   sig04 s11 sp1 16.8s n={'train': 66, 'val': 12, 'test': 18}
+20:45:08  evals   sig04 s11 sp2 16.0s n={'train': 66, 'val': 12, 'test': 18}
+20:45:24  evals   sig04 s11 sp3 15.6s n={'train': 66, 'val': 12, 'test': 18}
+20:45:40  evals   sig04 s11 sp4 15.9s n={'train': 66, 'val': 12, 'test': 18}
+20:45:40  suite done: 60 evaluations written, 0 skipped (cached), 10 datasets generated, 0 errors, 21.6 min

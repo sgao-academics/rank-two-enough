@@ -1,0 +1,20 @@
+  [s00]
+  [s01]
+  [s02]
+  [s03]
+  [s04]
+  [s05]
+  [s06]
+  [s07]
+  [s08]
+  [s09]
+  [s10]
+  [s11]
+
+model                  train C/test C train C/test O     change
+G1 global direction        0.9072     0.9305    +0.0233
+M1 L3 a0.1                 0.9088     0.9313    +0.0225
+LRB r2                     0.9204     0.9314    +0.0110
+B4 ridge poly2             0.9302     0.9351    +0.0049
+
+wrote 05_Logs/lrb_transfer.json

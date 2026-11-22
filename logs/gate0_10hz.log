@@ -1,0 +1,15 @@
+﻿
+=== Gate-0 ===
+sim            : mujoco:push3d
+classification : DETERMINISTIC (PASS)
+repeats        : 20 steps: 20
+max |dpose|    : 3.007e-11  tol: 1e-09
+mean|dpose|    : 1.583e-12
+drift slope    : -1.974e-14  growth: x1.0
+  - bit-identical replay; treat ground truth as a single deterministic rollout
+  - eps = 1e-6 (spec fallback); no repeated sampling needed
+
+=== noise floor ===
+eps            : 4.807e-12  (quantile 0.95)
+
+written: D:\counterfactual-plan-ranking\05_Logs\gate0_push3d_10hz.json

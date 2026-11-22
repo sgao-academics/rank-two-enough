@@ -1,0 +1,91 @@
+{
+  "gate": "Gate-0_replay_determinism",
+  "sim": "mujoco:push3d",
+  "classification": "DETERMINISTIC",
+  "passed": true,
+  "repeats": 20,
+  "steps": 20,
+  "max_abs_diff": 1.5371037775935292e-12,
+  "mean_abs_diff": 8.27054370125702e-14,
+  "drift_slope": 4.424906556454315e-15,
+  "drift_growth": 1.0,
+  "per_run_max": [
+    0.0,
+    1.5371037775935292e-12,
+    1.3644085861130861e-12,
+    4.666267372499533e-13,
+    9.686418334098335e-13,
+    1.1933232180183495e-12,
+    1.3644085861130861e-12,
+    4.666267372499533e-13,
+    9.686418334098335e-13,
+    1.1933232180183495e-12,
+    1.3644085861130861e-12,
+    4.666267372499533e-13,
+    9.686418334098335e-13,
+    1.1933232180183495e-12,
+    1.3644085861130861e-12,
+    4.666267372499533e-13,
+    9.686418334098335e-13,
+    1.1933232180183495e-12,
+    1.3644085861130861e-12,
+    4.666267372499533e-13
+  ],
+  "notes": [
+    "bit-identical replay; treat ground truth as a single deterministic rollout",
+    "eps = 1e-6 (spec fallback); no repeated sampling needed"
+  ],
+  "fingerprint": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "processor_count": 32,
+    "os": "Windows 11",
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128",
+    "mujoco": "3.17.0",
+    "pybullet": null,
+    "ai2thor": null,
+    "cuda_deterministic": false,
+    "cuda_available": true,
+    "solver_iterations": 100,
+    "num_envs": "UNSET",
+    "threads": "UNSET",
+    "vectorized": "UNSET",
+    "sim": "mujoco",
+    "mujoco_version": "3.17.0",
+    "scene": "push3d (CausalWorld-style factorisation)",
+    "timestep": 0.002,
+    "substeps_per_control_step": 5,
+    "control_dt": 0.01,
+    "integrator": "Euler",
+    "cone": "pyramidal",
+    "solver": 2,
+    "noslip_iterations": 0,
+    "n_joint_dof": 15,
+    "n_bodies": 4,
+    "causal_factors": {
+      "object_mass": 0.05,
+      "object_half_size": 0.02,
+      "sliding_friction": 0.9,
+      "target_xy": [
+        -0.12,
+        0.12
+      ]
+    }
+  },
+  "thresholds": {
+    "pose_tol": 1e-09,
+    "drift_tol": 0.001
+  },
+  "noise_floor": {
+    "gate": "noise_floor_test_retest",
+    "quantile": 0.95,
+    "eps": 2.759251160888703e-13,
+    "n_units": 40,
+    "k_arms": 5,
+    "repeats": 2,
+    "max_abs_diff_between_replays": 4.662659147669501e-13,
+    "note": "use 1e-6 instead when Gate-0 classifies the simulator as DETERMINISTIC"
+  }
+}

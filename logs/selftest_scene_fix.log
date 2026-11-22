@@ -1,0 +1,93 @@
+﻿==============================================================================
+counterfactual-plan-ranking self-test -- metrics.py (spec 1.3) + gate0_replay.py
+==============================================================================
+interpreter : D:\Miniconda3\envs\torch-cuda128\python.exe
+python      : 3.12.13
+numpy       : 2.4.3
+scipy       : 1.17.1
+base table: RolloutTable(steps=360, K=5, episodes=12, degenerate=0.0%)
+
+A. Gate-2 ruler self-test (spec gate 2)
+  [PASS] oracle -> DAR = 1.0                            dar=1.000000
+  [PASS] oracle -> nMAE = 0                             nmae=0.00e+00
+  [PASS] oracle -> regret_norm = 0                      regret=0.00e+00
+  [PASS] chance -> DAR in [0.40, 0.60]                  dar=0.4903
+  [PASS] chance -> |rho| <= 0.10                        rho=-0.0008
+  [PASS] chance -> regret_norm > 0                      regret=1.3165
+  [PASS] Gate-2 overall                                 
+
+B. estimator identities
+  [PASS] constant offset cancels in Delta               dar=1.0000 mae=2.24e-17
+  [PASS] doubling -> DAR 1, nMAE ~ 1                    dar=1.0000 nmae=0.997
+  [PASS] 'no effect' prediction -> DAR = 0              dar=0.0000
+  [PASS] eps above all effects -> undecidable 1.0       undecidable=1.00 dar=nan
+  [PASS] all-degenerate -> primary DAR is null          value=None
+  [PASS] all-degenerate -> inclusive variant still computed value=1.000
+  [PASS] point estimate inside its own 95% CI           
+  [PASS] report carries spec_version + cluster unit     N=12 episodes, 360 steps
+
+C. diagnosis, recovery, intervention locality
+  [PASS] Hit@1 = 1/3                                    hit@1=0.3333
+  [PASS] MRR = (1 + 1/2 + 0)/3 = 0.5                    mrr=0.5000
+  [PASS] recovery reports all three arms                ours=0.48 rand=0.30 oracle=0.93
+  [PASS] delta_vs_random CI excludes 0                  CI=[0.085, 0.285]
+  [PASS] Gate-1 accepts local intervention              max_non_nb=0.0040 tol=0.010
+  [PASS] Gate-1 rejects leaking intervention            max_non_nb=0.5000
+
+C2. rank statistics (scipy-backed)
+  [PASS] scipy importable                               scipy=1.17.1
+  [PASS] average ranks on ties -> [1.5,1.5,3,4]         ranks=[1.5, 1.5, 3.0, 4.0]
+  [PASS] tau-b on tied identical rows = 1.0             tau=1.000000
+  [PASS] tau-b on tied reversed rows = -1.0             tau=-1.000000
+  [PASS] tau-b on 200 tied steps stays in [-1,1]        max|tau|=1.0000 (hand-rolled version reached |tau|>4)
+  [PASS] rho on 200 tied steps stays in [-1,1]          max|rho|=1.0000
+
+D. Gate-0 replay determinism (mock simulators)
+  [PASS] mock:det -> DETERMINISTIC                      got DETERMINISTIC max=0.00e+00 slope=0.00e+00
+  [PASS] mock:noisy -> STABLE_STOCHASTIC                got STABLE_STOCHASTIC max=1.31e-05 slope=1.65e-07
+  [PASS] mock:drift -> DRIFTING                         got DRIFTING max=1.04e+00 slope=2.16e-02
+  [PASS] noise floor on deterministic sim is ~0         eps=0.00e+00
+  [PASS] noise floor on noisy sim is > 0                eps=6.28e-04
+
+E. real engine adapter (skipped if mujoco is absent)
+  [PASS] adapter builds and returns (4,7) poses         shape=(4, 7)
+  [PASS] outcome in (0,1] at reset                      y=0.2982
+  [PASS] outcome strictly decreases with distance (no plateau) 0.4611->0.3317->0.2124->0.1236
+  [PASS] two instances agree bit-for-bit                max|diff|=0.00e+00
+  [PASS] real engine classified DETERMINISTIC           got DETERMINISTIC max=0.00e+00
+  [PASS] causalworld adapter refuses loudly when blocked factory entries=0
+
+F. data pipeline (sampler + split)
+  [PASS] generate refuses plan_len == H                 
+  [PASS] generate refuses plan_len > H                  
+  [PASS] generate refuses R-top on a plan unit          
+  [PASS] dataset generation is bit-reproducible         rebuilt twice from the same factors
+  [PASS] arm 0 identical under C and O (it is the factual arm) max|diff|=1.80e-16 in Y over 8 steps (replay floor, not 0)
+  [PASS] C and O disagree on counterfactual arms        8/8 steps differ
+  [PASS] every step stores plans (K, m, 3) with m = plan_len shapes=[(5, 3, 3)]
+  [PASS] arms is exactly plans[:, 0]                    the one-step view must not be a second, drift-prone field
+  [PASS] plan perturbation is not a constant offset (lag-1 corr far from +1) measured lag-1 corr=-0.041, predicted 0.000 at w=0.5 (w=0 would be +1)
+  [PASS] decision points advance by exactly one control step (setpoint identity) 0/6 transitions deviate from c'=c+0.0080*a, max|dev|=2.82e-18 (deviation means the trajectory is not 1 step per decision)
+  [PASS] pusher moves at most one step per decision point max|dpush|=0.0033 m vs one-step bound 0.0119 m (median 0.0028)
+  [PASS] the object is actually pushed on a non-trivial share of steps 100.0% of transitions move the object >1e-6 m
+  [PASS] potential rise -> positive Y, fall -> negative Y up=0.3333 down=-0.3333
+  [PASS] Y magnitudes are on the phi_ref scale (not raw phi) max|Y|=0.1439 on 32 arms
+  [PASS] records round-trip into a dense table          rows=40 table=(8, 5)
+  [PASS] split report has no template/instance leak     templates t/v/te=1/0/1
+
+G. predictor interface (leak-proof by construction) + report schema
+  [PASS] FeatureTable holds no truth/degeneracy field   fields=['episode_ids', 'k', 'myopic', 'obs', 'phi_ref', 'plans']
+  [PASS] features_from returns (n_steps, K, m, 3) plans and full-width obs plans=(12, 5, 3, 3) obs=(12, 22)
+  [PASS] arms is a derived view of plans[:, :, 0]       arms=(12, 5, 3)
+  [PASS] fit_predict refuses overlapping train/test     
+  [PASS] Ridge predictions invariant to the myopic column max|diff|=0.00e+00 (a positive weight on it would make DAR 0 or 1, never chance)
+  [PASS] one-step oracle delta == 1-step truth delta (to replay tolerance) max|diff|=1.61e-12, Gate-0 tol=1e-9
+  [PASS] arm-shuffled control stays near chance (gross-failure check) control=0.708 chance=0.510
+  [PASS] horizon_collapse returns a bounded rank statistic rho=0.761 identical=0.11
+  [PASS] environment() records schema+spec+stack        keys=['numpy', 'platform', 'python', 'schema_version', 'scipy', 'spec_version']
+  [PASS] pack_run carries phi_ref + spec_version and folds the verdict phi_ref=0.332714
+
+==============================================================================
+TOTAL 64 checks, 0 failed
+VERDICT: PASS
+==============================================================================

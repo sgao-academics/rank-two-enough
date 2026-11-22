@@ -1,0 +1,10 @@
+﻿total aligned push per arm: |mean over arms| = 1.49e-17   sd across arms = 1.98e-17
+degenerate rate = 0.000   mean across-arm spread of y_C = 0.0080
+mean |y_C| = 0.0468  (phi_ref 0.3207)
+
+ranker                            DAR   regret   zero usable
+G0 perturbation magnitude      1.0000    -   1.0000    -  
+G0b summed aligned push        0.1292    -   0.6500    -  
+G1 global direction            1.0000    -   1.0000    -  
+M1 L3 a0.1                     1.0000    -   1.0000    -  
+R1 one-step oracle             0.2583    -   0.4833    -  

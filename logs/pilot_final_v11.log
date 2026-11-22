@@ -1,0 +1,37 @@
+﻿==============================================================================
+pilot: 48 episodes x 15 decision points, K=5 H=3 rule=R-top
+adapter: mujoco:push3d | mujoco 3.17.0
+==============================================================================
+phi_ref = 0.279935   degenerate(eps=1e-06)
+split  : {'train': 30, 'val': 12, 'test': 6} | templates t/v/te = 10 2 4
+leak   : OK
+
+--- convention C (closed loop [primary]) ---
+   RolloutTable(steps=720, K=5, episodes=48, degenerate=1.8%)
+   degenerate ratio : 0.018
+   no-effect (y_pred = factual arm)   DAR=0.0000  nMAE= 2.3749  regret= 1.0000  rho=+nan
+   oracle (y_pred = y_true)           DAR=1.0000  nMAE= 0.0000  regret= 0.0000  rho=+1.0000
+   shuffled arms (chance)             DAR=0.4651  nMAE= 3.1483  regret= 2.8865  rho=+0.0116
+   Gate-2 ruler     : PASS | oracle DAR=1.0000  chance 0.4696+-0.0112 over 200 permutations (p+=0.543)
+
+--- convention O (open loop [secondary]) ---
+   RolloutTable(steps=720, K=5, episodes=48, degenerate=1.8%)
+   degenerate ratio : 0.018
+   no-effect (y_pred = factual arm)   DAR=0.0000  nMAE= 2.3874  regret= 1.0000  rho=+nan
+   oracle (y_pred = y_true)           DAR=1.0000  nMAE= 0.0000  regret= 0.0000  rho=+1.0000
+   shuffled arms (chance)             DAR=0.4662  nMAE= 3.1737  regret= 2.9535  rho=+0.0082
+   Gate-2 ruler     : PASS | oracle DAR=1.0000  chance 0.4696+-0.0110 over 200 permutations (p+=0.545)
+
+=== pipeline checks ===
+  [PASS] no-effect DAR == 0
+  [PASS] oracle DAR == 1
+  [PASS] oracle regret == 0
+  [PASS] shuffled DAR near permutation chance
+  [PASS] Gate-2 ruler passed
+  [PASS] signs are mixed (a direction metric needs both)
+  [PASS] split has no leak
+  [PASS] open-loop convention generated
+  [PASS] degenerate ratio below no-signal threshold
+
+written: D:\counterfactual-plan-ranking\05_Logs\pilot_rtop.json
+dataset: D:\counterfactual-plan-ranking\04_Data\pilot_48ep.json

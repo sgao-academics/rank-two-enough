@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "Replication package for: Rank Two Is Enough: Measuring and Matching the Interaction Structure of Counterfactual Plan Ranking"
+message: "If you use this package, please cite the paper."
+type: software
+authors:
+  - family-names: Gao
+    given-names: Shuaidong
+    orcid: "https://orcid.org/0009-0004-5641-3581"
+    affiliation: "Chongqing Institute of Foreign Studies"
+license: MIT
+keywords:
+  - counterfactual planning
+  - benchmark design
+  - low-rank interaction structure
+  - replication package

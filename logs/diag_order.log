@@ -1,0 +1,7 @@
+﻿scalar  sum(du): beta=0.0258  test R2(within-step)=0.7988
+M1 (11 features): test R2(within-step)=0.8361
+
+virtually-equal sum(du) pairs: 13  of which truth differs by >10% of the median |Delta y|: 11 (84.6%)
+  median |Delta y| gap within those pairs = 0.0104  (typical |Delta y| = 0.0252)
+
+for context: median |sum(du)| across arms = 0.7642, sd = 1.1784

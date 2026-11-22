@@ -1,0 +1,41 @@
+﻿dataset: D:\counterfactual-plan-ranking\04_Data\pilot_rsamp_m3_H6_48ep.json
+meta: {'spec_version': '1.3', 'K': 5, 'H': 6, 'plan_len': 3, 'plan_tail': 3, 'phi_ref': 0.19581106564194806}
+split: {'val': 12, 'train': 30, 'test': 6}
+
+=== VAL (12 episodes) ===
+  B0 no-effect                       DAR=0.0000  rho=+nan  regret=1.0000  zero=0.206  nMAE=1.662
+  B1 bet-on-expert                   DAR=0.5750  rho=+nan  regret=1.0000  zero=0.206  nMAE=1.849
+  B2 ridge surrogate                 DAR=0.4764  rho=-0.0322  regret=5.3949  zero=0.194  nMAE=1.786
+  C1 ridge arm-shuffled (control)    DAR=0.4417  rho=-0.1100  regret=29.7231  zero=0.244  nMAE=1.728
+  R1 one-step oracle (model-based)   DAR=0.7806  rho=+0.5807  regret=1.1430  zero=0.539  nMAE=1.319
+  M S1_frame a=0.1                   DAR=0.6597  rho=+0.3844  regret=28.6613  zero=0.422  nMAE=1.878
+  M S1_frame a=1                     DAR=0.6556  rho=+0.3978  regret=27.5750  zero=0.411  nMAE=1.853
+  M S1_frame a=10                    DAR=0.6542  rho=+0.3978  regret=27.6590  zero=0.400  nMAE=1.813
+  M S1_frame_gate a=0.1              DAR=0.5778  rho=+0.3667  regret=29.5590  zero=0.400  nMAE=2.537
+  M S1_frame_gate a=1                DAR=0.5722  rho=+0.3578  regret=29.2187  zero=0.411  nMAE=2.564
+  M S1_frame_gate a=10               DAR=0.5625  rho=+0.3678  regret=27.5326  zero=0.400  nMAE=2.629
+  M S1_frame_gate_phi a=0.1          DAR=0.5792  rho=+0.3400  regret=28.1230  zero=0.400  nMAE=2.260
+  M S1_frame_gate_phi a=1            DAR=0.5736  rho=+0.3356  regret=28.1222  zero=0.406  nMAE=2.319
+  M S1_frame_gate_phi a=10           DAR=0.5625  rho=+0.3144  regret=27.1023  zero=0.417  nMAE=2.424
+  M S1_frame_gate_phi_cum a=0.1      DAR=0.5750  rho=+0.3411  regret=28.1300  zero=0.394  nMAE=2.257
+  M S1_frame_gate_phi_cum a=1        DAR=0.5708  rho=+0.3433  regret=6.7882  zero=0.406  nMAE=2.316
+  M S1_frame_gate_phi_cum a=10       DAR=0.5611  rho=+0.3200  regret=5.7714  zero=0.417  nMAE=2.417
+
+=== TEST (6 episodes) ===
+  B0 no-effect                       DAR=0.0000  rho=+nan  regret=1.0000  zero=0.122  nMAE=1.986
+  B1 bet-on-expert                   DAR=0.5528  rho=+nan  regret=1.0000  zero=0.122  nMAE=2.036
+  B2 ridge surrogate                 DAR=0.5889  rho=+0.2267  regret=2.1366  zero=0.378  nMAE=1.971
+  C1 ridge arm-shuffled (control)    DAR=0.4111  rho=-0.3778  regret=3.8707  zero=0.111  nMAE=2.045
+  R1 one-step oracle (model-based)   DAR=0.8250  rho=+0.6689  regret=0.3608  zero=0.711  nMAE=1.548
+  M S1_frame a=0.1                   DAR=0.6194  rho=+0.3467  regret=3.1243  zero=0.456  nMAE=1.994
+  M S1_frame a=1                     DAR=0.6306  rho=+0.3556  regret=3.1116  zero=0.467  nMAE=1.953
+  M S1_frame a=10                    DAR=0.6333  rho=+0.3889  regret=3.0873  zero=0.500  nMAE=1.888
+  M S1_frame_gate a=0.1              DAR=0.6056  rho=+0.3156  regret=2.9795  zero=0.478  nMAE=2.167
+  M S1_frame_gate a=1                DAR=0.6028  rho=+0.3222  regret=2.9937  zero=0.478  nMAE=2.157
+  M S1_frame_gate a=10               DAR=0.5889  rho=+0.3378  regret=3.0325  zero=0.467  nMAE=2.169
+  M S1_frame_gate_phi a=0.1          DAR=0.6139  rho=+0.3311  regret=2.9728  zero=0.500  nMAE=1.969
+  M S1_frame_gate_phi a=1            DAR=0.6083  rho=+0.3333  regret=3.0232  zero=0.489  nMAE=1.982
+  M S1_frame_gate_phi a=10           DAR=0.6028  rho=+0.3311  regret=3.0452  zero=0.489  nMAE=2.007
+  M S1_frame_gate_phi_cum a=0.1      DAR=0.6111  rho=+0.3267  regret=3.0265  zero=0.489  nMAE=1.983
+  M S1_frame_gate_phi_cum a=1        DAR=0.6056  rho=+0.3311  regret=3.0232  zero=0.489  nMAE=1.999
+  M S1_frame_gate_phi_cum a=10       DAR=0.6111  rho=+0.3244  regret=3.0326  zero=0.500  nMAE=2.031

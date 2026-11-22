@@ -1,0 +1,11 @@
+﻿==============================================================================
+pilot: 48 episodes x 15 decision points, K=5 H=6 rule=R-samp
+decision unit: 3-step plan, tail 3 steps (C re-plans, O replays)
+adapter: mujoco:push3d | mujoco 3.17.0
+==============================================================================
+phi_ref = 0.320613   obs_dim = 22   degenerate(eps=1e-06)
+arm0 replay  : max |arm0 - factual| = 1.59e-13 in potential (4.97e-13 in Y) over 720 decisions
+split  : {'train': 30, 'val': 12, 'test': 6} | templates t/v/te = 10 2 4
+leak   : OK
+fit on 30 train episodes, score on 6 test episodes
+plan content : 1-step vs 6-step rank rho=0.779 | identical ranking 20.4% | same argmax 66.7%  (n=720 steps)

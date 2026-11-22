@@ -1,0 +1,4 @@
+﻿substeps=5   control_dt=0.010s horizon=0.03s | within-step sd=1.93e-04  between-step sd=2.98e-02  ratio=0.006 | max-min=5.23e-04 | degen=0.0% | 0.1s
+substeps=15  control_dt=0.030s horizon=0.09s | within-step sd=2.86e-04  between-step sd=2.88e-02  ratio=0.010 | max-min=7.79e-04 | degen=0.0% | 0.2s
+substeps=25  control_dt=0.050s horizon=0.15s | within-step sd=4.96e-04  between-step sd=1.78e-02  ratio=0.028 | max-min=1.28e-03 | degen=0.0% | 0.4s
+substeps=50  control_dt=0.100s horizon=0.30s | within-step sd=5.68e-04  between-step sd=1.13e-02  ratio=0.050 | max-min=1.50e-03 | degen=0.0% | 0.6s

@@ -1,0 +1,73 @@
+{
+  "gate": "Gate-0_replay_determinism",
+  "sim": "mujoco:push3d",
+  "classification": "DETERMINISTIC",
+  "passed": true,
+  "repeats": 8,
+  "steps": 12,
+  "max_abs_diff": 5.929053775721727e-11,
+  "mean_abs_diff": 2.25336585682609e-12,
+  "drift_slope": 1.892489802434753e-12,
+  "drift_growth": 1.445848778058318,
+  "per_run_max": [
+    0.0,
+    5.288688931237573e-11,
+    1.813335592792953e-11,
+    6.819461662033177e-12,
+    2.394469345023964e-11,
+    1.4664797154395615e-11,
+    5.929053775721727e-11,
+    1.7175906530386698e-11
+  ],
+  "notes": [
+    "bit-identical replay; treat ground truth as a single deterministic rollout",
+    "eps = 1e-6 (spec fallback); no repeated sampling needed"
+  ],
+  "fingerprint": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "processor_count": 32,
+    "os": "Windows 11",
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128",
+    "mujoco": "3.17.0",
+    "pybullet": null,
+    "ai2thor": null,
+    "cuda_deterministic": false,
+    "cuda_available": true,
+    "solver_iterations": 100,
+    "num_envs": "UNSET",
+    "threads": "UNSET",
+    "vectorized": "UNSET",
+    "sim": "mujoco",
+    "mujoco_version": "3.17.0",
+    "scene": "push3d (CausalWorld-style factorisation)",
+    "timestep": 0.002,
+    "substeps_per_control_step": 50,
+    "control_dt": 0.1,
+    "integrator": "Euler",
+    "cone": "pyramidal",
+    "solver": 2,
+    "noslip_iterations": 0,
+    "n_joint_dof": 15,
+    "n_bodies": 4,
+    "causal_factors": {
+      "object_mass": 0.05,
+      "object_half_size": 0.02,
+      "sliding_friction": 0.9,
+      "target_xy": [
+        -0.12,
+        0.12
+      ],
+      "distractor_xy": [
+        0.1,
+        -0.1
+      ]
+    }
+  },
+  "thresholds": {
+    "pose_tol": 1e-09,
+    "drift_tol": 0.001
+  }
+}

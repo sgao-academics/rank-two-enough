@@ -1,0 +1,5 @@
+﻿M1 dev weights: [-0.005  0.009  0.023  0.019  0.001 -0.018  0.103 -0.001 -0.106  0.012
+ -0.002]
+M1  DAR(test)=0.9361
+C2 within-step DAR mean=0.8908 sd=0.0151 range=[0.856,0.908] | cos(w, w_M1) mean=+0.067
+C2 across-rows  DAR mean=0.6169 sd=0.0821 range=[0.497,0.756] | cos(w, w_M1) mean=+0.221

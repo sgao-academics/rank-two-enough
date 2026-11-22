@@ -1,0 +1,20 @@
+{
+  "conv": "C",
+  "n_steps": {
+    "train": 450,
+    "test": 90
+  },
+  "K": 5,
+  "plan_len": 3,
+  "scalar_r2": 0.7987737111398023,
+  "scalar_beta": 0.025849671402886472,
+  "full_r2": 0.8352802731938573,
+  "full_minus_scalar": 0.036506562054055,
+  "eff_rank": 3.256405050832912,
+  "n_dev_features": 11,
+  "top_eig_share": 0.48236562298855495,
+  "order_pairs_n": 13,
+  "order_pairs_frac": 0.8461538461538461,
+  "order_gap_median": 0.010428314543338934,
+  "verdict_one_dimensional": false
+}

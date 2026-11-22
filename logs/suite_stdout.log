@@ -1,0 +1,76 @@
+19:58:51  suite start: 6 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+19:58:51  dataset m3    s00 cached 0.0s ds_m3_s00_e96.json
+20:26:16  suite start: 1 configs x 12 seeds x 5 splits | episodes=96 T=15 K=5
+20:26:16  dataset m3    s00 cached 0.0s ds_m3_s00_e96.json
+20:26:47  evals   m3    s00 sp0 31.5s n={'train': 66, 'val': 12, 'test': 18}
+20:27:11  evals   m3    s00 sp1 23.8s n={'train': 66, 'val': 12, 'test': 18}
+20:27:31  evals   m3    s00 sp2 20.3s n={'train': 66, 'val': 12, 'test': 18}
+20:27:51  evals   m3    s00 sp3 20.2s n={'train': 66, 'val': 12, 'test': 18}
+20:28:12  evals   m3    s00 sp4 20.3s n={'train': 66, 'val': 12, 'test': 18}
+20:29:05  dataset m3    s01 GEN  53.0s ds_m3_s01_e96.json
+20:29:25  evals   m3    s01 sp0 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:29:46  evals   m3    s01 sp1 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:30:07  evals   m3    s01 sp2 20.4s n={'train': 66, 'val': 12, 'test': 18}
+20:30:27  evals   m3    s01 sp3 20.4s n={'train': 66, 'val': 12, 'test': 18}
+20:30:48  evals   m3    s01 sp4 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:31:40  dataset m3    s02 GEN  52.4s ds_m3_s02_e96.json
+20:32:01  evals   m3    s02 sp0 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:32:21  evals   m3    s02 sp1 20.6s n={'train': 66, 'val': 12, 'test': 18}
+20:32:42  evals   m3    s02 sp2 20.5s n={'train': 66, 'val': 12, 'test': 18}
+20:33:02  evals   m3    s02 sp3 20.3s n={'train': 66, 'val': 12, 'test': 18}
+20:33:22  evals   m3    s02 sp4 20.1s n={'train': 66, 'val': 12, 'test': 18}
+20:34:20  dataset m3    s03 GEN  57.7s ds_m3_s03_e96.json
+20:34:42  evals   m3    s03 sp0 21.9s n={'train': 66, 'val': 12, 'test': 18}
+20:35:01  evals   m3    s03 sp1 19.5s n={'train': 66, 'val': 12, 'test': 18}
+20:35:21  evals   m3    s03 sp2 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:35:40  evals   m3    s03 sp3 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:36:00  evals   m3    s03 sp4 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:36:50  dataset m3    s04 GEN  50.7s ds_m3_s04_e96.json
+20:37:11  evals   m3    s04 sp0 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:37:32  evals   m3    s04 sp1 20.8s n={'train': 66, 'val': 12, 'test': 18}
+20:37:52  evals   m3    s04 sp2 20.6s n={'train': 66, 'val': 12, 'test': 18}
+20:38:13  evals   m3    s04 sp3 20.8s n={'train': 66, 'val': 12, 'test': 18}
+20:38:34  evals   m3    s04 sp4 20.8s n={'train': 66, 'val': 12, 'test': 18}
+20:39:27  dataset m3    s05 GEN  52.9s ds_m3_s05_e96.json
+20:39:48  evals   m3    s05 sp0 21.0s n={'train': 66, 'val': 12, 'test': 18}
+20:40:09  evals   m3    s05 sp1 20.9s n={'train': 66, 'val': 12, 'test': 18}
+20:40:30  evals   m3    s05 sp2 20.7s n={'train': 66, 'val': 12, 'test': 18}
+20:40:50  evals   m3    s05 sp3 20.8s n={'train': 66, 'val': 12, 'test': 18}
+20:41:11  evals   m3    s05 sp4 20.5s n={'train': 66, 'val': 12, 'test': 18}
+20:42:03  dataset m3    s06 GEN  51.7s ds_m3_s06_e96.json
+20:42:23  evals   m3    s06 sp0 20.4s n={'train': 66, 'val': 12, 'test': 18}
+20:42:44  evals   m3    s06 sp1 20.6s n={'train': 66, 'val': 12, 'test': 18}
+20:43:04  evals   m3    s06 sp2 20.5s n={'train': 66, 'val': 12, 'test': 18}
+20:43:27  evals   m3    s06 sp3 23.2s n={'train': 66, 'val': 12, 'test': 18}
+20:43:59  evals   m3    s06 sp4 31.5s n={'train': 66, 'val': 12, 'test': 18}
+20:45:13  dataset m3    s07 GEN  73.7s ds_m3_s07_e96.json
+20:45:43  evals   m3    s07 sp0 30.2s n={'train': 66, 'val': 12, 'test': 18}
+20:46:12  evals   m3    s07 sp1 29.3s n={'train': 66, 'val': 12, 'test': 18}
+20:46:42  evals   m3    s07 sp2 30.3s n={'train': 66, 'val': 12, 'test': 18}
+20:47:11  evals   m3    s07 sp3 29.2s n={'train': 66, 'val': 12, 'test': 18}
+20:47:31  evals   m3    s07 sp4 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:48:21  dataset m3    s08 GEN  49.5s ds_m3_s08_e96.json
+20:48:40  evals   m3    s08 sp0 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:48:59  evals   m3    s08 sp1 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:49:19  evals   m3    s08 sp2 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:49:38  evals   m3    s08 sp3 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:49:58  evals   m3    s08 sp4 19.3s n={'train': 66, 'val': 12, 'test': 18}
+20:50:48  dataset m3    s09 GEN  49.9s ds_m3_s09_e96.json
+20:51:07  evals   m3    s09 sp0 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:51:27  evals   m3    s09 sp1 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:51:47  evals   m3    s09 sp2 20.0s n={'train': 66, 'val': 12, 'test': 18}
+20:52:07  evals   m3    s09 sp3 19.8s n={'train': 66, 'val': 12, 'test': 18}
+20:52:27  evals   m3    s09 sp4 19.8s n={'train': 66, 'val': 12, 'test': 18}
+20:53:15  dataset m3    s10 GEN  48.6s ds_m3_s10_e96.json
+20:53:35  evals   m3    s10 sp0 19.4s n={'train': 66, 'val': 12, 'test': 18}
+20:53:54  evals   m3    s10 sp1 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:54:14  evals   m3    s10 sp2 19.5s n={'train': 66, 'val': 12, 'test': 18}
+20:54:34  evals   m3    s10 sp3 19.8s n={'train': 66, 'val': 12, 'test': 18}
+20:54:54  evals   m3    s10 sp4 19.8s n={'train': 66, 'val': 12, 'test': 18}
+20:55:43  dataset m3    s11 GEN  49.9s ds_m3_s11_e96.json
+20:56:03  evals   m3    s11 sp0 19.8s n={'train': 66, 'val': 12, 'test': 18}
+20:56:23  evals   m3    s11 sp1 19.6s n={'train': 66, 'val': 12, 'test': 18}
+20:56:43  evals   m3    s11 sp2 19.7s n={'train': 66, 'val': 12, 'test': 18}
+20:57:06  evals   m3    s11 sp3 23.4s n={'train': 66, 'val': 12, 'test': 18}
+20:57:27  evals   m3    s11 sp4 20.6s n={'train': 66, 'val': 12, 'test': 18}
+20:57:27  suite done: 60 evaluations written, 0 skipped (cached), 11 datasets generated, 0 errors, 31.2 min

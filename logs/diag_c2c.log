@@ -1,0 +1,9 @@
+﻿perm[0] = [0 1 4 3 2]  identity? False
+x[0,:,9] (cum_u)      = [-0.      0.2643 -0.7783 -0.9443  0.7071]
+xp[0,:,9] (after perm)= [-0.      0.2643  0.7071 -0.9443 -0.7783]
+y[0]                  = [0.05292 0.01171 0.02424 0.03649 0.06842]
+y[0] permuted by perm = [0.05292 0.01171 0.06842 0.03649 0.02424]
+
+corr(Delta yhat, Delta y) on test = +0.8771
+mean sign agreement (DAR, manual)=0.9089
+within-step sd of prediction: 6.541e-03  (true 3.444e-02)

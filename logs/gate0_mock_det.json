@@ -1,0 +1,63 @@
+{
+  "gate": "Gate-0_replay_determinism",
+  "sim": "mock:det",
+  "classification": "DETERMINISTIC",
+  "passed": true,
+  "repeats": 20,
+  "steps": 20,
+  "max_abs_diff": 0.0,
+  "mean_abs_diff": 0.0,
+  "drift_slope": 0.0,
+  "drift_growth": 1.0,
+  "per_run_max": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "notes": [
+    "bit-identical replay; treat ground truth as a single deterministic rollout",
+    "eps = 1e-6 (spec fallback); no repeated sampling needed"
+  ],
+  "fingerprint": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "processor_count": 32,
+    "os": "Windows 11",
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128",
+    "mujoco": null,
+    "pybullet": null,
+    "ai2thor": null,
+    "cuda_deterministic": false,
+    "cuda_available": true,
+    "solver_iterations": "UNSET",
+    "num_envs": "UNSET",
+    "threads": "UNSET",
+    "vectorized": "UNSET",
+    "mock": "deterministic_integrator",
+    "gain": 0.05,
+    "n_obj": 3
+  },
+  "thresholds": {
+    "pose_tol": 1e-09,
+    "drift_tol": 0.001
+  }
+}

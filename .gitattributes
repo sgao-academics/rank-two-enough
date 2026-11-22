@@ -1,0 +1,11 @@
+# the payload is binary; never let git touch it
+*.gz binary
+
+# text files are stored with LF so the package behaves the same on any platform
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.csv  text eol=lf
+*.log  text eol=lf
+*.txt  text eol=lf
+*.cff  text eol=lf

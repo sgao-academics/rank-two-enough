@@ -1,0 +1,48 @@
+﻿==============================================================================
+pilot: 24 episodes x 5 decision points, K=5 H=3 rule=R-top
+adapter: mujoco:push3d | mujoco 3.17.0
+==============================================================================
+phi_ref = 0.279935   obs_dim = 22   degenerate(eps=1e-06)
+split  : {'train': 16, 'val': 6, 'test': 2} | templates t/v/te = 10 2 4
+leak   : OK
+fit on 16 train episodes, score on 2 test episodes
+
+--- convention C (closed loop [primary]) ---
+   RolloutTable(steps=10, K=5, episodes=2, degenerate=0.0%)
+predictor                         DAR     nMAE   regret      rho     deg%
+-------------------------------------------------------------------------
+B0 no-effect                   0.0000   1.4875   1.0000     -         0.0
+B1 bet-on-expert               0.4000   1.7477   1.0000     -         0.0
+B2 myopic one-step             0.9714   1.1051   0.0000  +0.9250      0.0
+B3 ridge surrogate             0.7714   0.6038   0.2000  +0.9000      0.0
+C1 ridge-shuffled (control)    0.7714   0.6986   0.2000  +0.9000      0.0
+   REF oracle (ceiling, not a met DAR=1.0000  nMAE= 0.0000  regret= 0.0000
+   REF chance (permuted truth)    DAR=0.4826 +- 0.0918 over 200 permutations (p+=0.600)
+
+--- convention O (open loop [secondary]) ---
+   RolloutTable(steps=10, K=5, episodes=2, degenerate=0.0%)
+predictor                         DAR     nMAE   regret      rho     deg%
+-------------------------------------------------------------------------
+B0 no-effect                   0.0000   1.6022   1.0000     -         0.0
+B1 bet-on-expert               0.4000   1.8801   1.0000     -         0.0
+B2 myopic one-step             0.9714   1.1975   0.0000  +0.9250      0.0
+B3 ridge surrogate             0.7714   0.6704   0.2000  +0.9000      0.0
+C1 ridge-shuffled (control)    0.7714   0.7689   0.2000  +0.9000      0.0
+   REF oracle (ceiling, not a met DAR=1.0000  nMAE= 0.0000  regret= 0.0000
+   REF chance (permuted truth)    DAR=0.4826 +- 0.0918 over 200 permutations (p+=0.600)
+
+=== pipeline checks ===
+  [PASS] oracle DAR == 1 on eval split
+  [PASS] oracle regret == 0 on eval split
+  [PASS] no-effect DAR == 0
+  [PASS] chance is measured, not assumed
+  [FAIL] negative control sits at chance
+  [PASS] signs are mixed (a direction metric needs both)
+  [PASS] split has no leak
+  [PASS] train and eval splits are disjoint
+  [PASS] both conventions generated
+  [PASS] degenerate ratio below no-signal threshold
+  [PASS] Gate-2 ruler passed
+
+written: D:\counterfactual-plan-ranking\05_Logs\pilot_rtop_24ep_test.json
+dataset: D:\counterfactual-plan-ranking\04_Data\pilot_24ep.json

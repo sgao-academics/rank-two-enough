@@ -1,0 +1,9 @@
+﻿design: (450, 5, 15)  level block width: 4
+permuted rows identical to originals? False | frac of steps where perm is identity: 0.004
+M1 L3  |w|= 0.695  |w_dev|= 0.153  dev/lev=0.220  sign pattern=[-1  1  1  1  1 -1  1 -1 -1  1 -1]
+C2     |w|= 0.649  |w_dev|= 0.070  dev/lev=0.108  sign pattern=[-1  1  1  1  1 -1 -1 -1  1  1 -1]
+
+M1 DAR=0.9361
+M1 with deviation block zeroed: DAR=0.0000 (ties -> must be ~0)
+level block arm-constant: True
+within-step sd: level=0.00e+00  deviation=7.35e-01

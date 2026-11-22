@@ -1,0 +1,16 @@
+﻿A. factual_plan x5 from the same state
+   phi = [0.128257480395507 0.128257480395507 0.128257480395507 0.128257480395506
+ 0.128257480395507]
+   spread = 4.718e-16   (level 0.128257 -> relative 3.7e-15)
+   A is the achievable floor for anything that reloads a state.
+
+B. six steps, then the same six steps after a reload
+   continued = 0.128257480395506
+   reloaded  = 0.128257480395507
+   |diff|    = 2.776e-17  (this is what the arm-0 assertion compares)
+
+C. two fresh instances, identical script
+   |diff| = 0.000e+00
+
+verdict: the arm-0 tolerance must exceed 4.7e-16; 1e-9 was a guess, not a
+         measurement, and it asserted more precision than the scene gives.

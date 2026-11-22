@@ -1,0 +1,17 @@
+﻿episode pilot_000 t = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+episode pilot_001 t = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+episode pilot_002 t = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+t gap histogram: (array([1]), array([672]))
+
+setpoint:  c1-c0 = 0.023855 * a   (action_scale in adapter = 0.008)
+           max|resid| = 3.295e-02, p99 = 2.419e-02
+pusher   :  p1-p0 = 0.8142 * (c1-p0)   R2=0.9658
+           |dp| median = 2.102e-02 m per step
+
+object   : |do| median = 5.191e-12 m per step
+           d_po in [0.000,0.030): n=  24  median|do|=5.623e-04  mean=6.534e-03
+           d_po in [0.030,0.040): n= 183  median|do|=2.092e-03  mean=1.027e-02
+           d_po in [0.040,0.060): n= 214  median|do|=5.240e-12  mean=4.144e-03
+           d_po in [0.060,0.100): n=  91  median|do|=8.762e-13  mean=7.143e-04
+           cos(do, pusher->object) over moving steps: median 0.940

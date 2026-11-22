@@ -1,0 +1,858 @@
+{
+ "run_label": "pilot 24ep T5 m3 H6 R-samp",
+ "env": {
+  "schema_version": "1.0",
+  "spec_version": "1.3",
+  "python": "3.12.13",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "adapter": "mujoco:push3d",
+  "fingerprint": {
+   "sim": "mujoco",
+   "mujoco_version": "3.17.0",
+   "scene": "push3d (CausalWorld-style factorisation)",
+   "timestep": 0.002,
+   "substeps_per_control_step": 50,
+   "control_dt": 0.1,
+   "integrator": "Euler",
+   "cone": "pyramidal",
+   "solver": 2,
+   "solver_iterations": 100,
+   "noslip_iterations": 0,
+   "n_joint_dof": 15,
+   "n_bodies": 4,
+   "causal_factors": {
+    "object_mass": 0.05148870305892883,
+    "object_half_size": 0.019910796374667715,
+    "sliding_friction": 1.0882311609680224,
+    "target_xy": [
+     -0.12448617623796343,
+     -0.11382285274561478
+    ],
+    "distractor_xy": [
+     -0.104603264289984,
+     -0.10273759591621365
+    ]
+   }
+  }
+ },
+ "dataset": {
+  "phi_ref": 0.20220842863062,
+  "K": 5,
+  "H": 6,
+  "T": 5,
+  "rule": "R-samp",
+  "n_episodes": 24,
+  "n_steps": 120,
+  "conventions": {
+   "primary": "C_closed_loop",
+   "secondary": "O_open_loop",
+   "diagnostic_only": "S_one_step"
+  },
+  "base_policy": "scripted_frozen_expert (NOT a learned policy)"
+ },
+ "split": {
+  "seed": 0,
+  "on": "template",
+  "report": {
+   "ok": true,
+   "n_train_templates": 10,
+   "n_val_templates": 2,
+   "n_test_templates": 4,
+   "template_leak": [],
+   "instance_leak": [],
+   "unseen_object_combination_rate": 1.0,
+   "n_episodes": {
+    "train": 16,
+    "val": 6,
+    "test": 2
+   },
+   "counts": 24
+  },
+  "n_train": 16,
+  "n_val": 6,
+  "n_eval": 2
+ },
+ "eval_split": "test",
+ "config": {
+  "K": 5,
+  "H": 6,
+  "plan_len": 3,
+  "T": 5,
+  "warmup": 6,
+  "rule": "R-samp",
+  "n_cand": 8,
+  "proposal_sigma": 0.8,
+  "min_arm_sep": 0.25,
+  "min_spread": 0.125,
+  "plan_alt_frac": 0.5,
+  "control_substeps": 50,
+  "eps_degen": 1e-06,
+  "seed": 0
+ },
+ "estimates": [
+  {
+   "conv": "C",
+   "label": "B0 no-effect",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.0,
+   "dar_ci95": [
+    0.0,
+    0.0
+   ],
+   "nmae": 1.612450704420055,
+   "nmae_ci95": [
+    1.3297665668253495,
+    2.396442933805339
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.027423961398984988,
+   "regret_ci95": [
+    0.016290237261483476,
+    0.03855768553648649
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.06516808166340604,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "B1 bet-on-expert",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.6,
+   "dar_ci95": [
+    0.55,
+    0.65
+   ],
+   "nmae": 1.596518230925061,
+   "nmae_ci95": [
+    1.3492243484488962,
+    2.2925685872700776
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.027423961398984988,
+   "regret_ci95": [
+    0.016290237261483476,
+    0.03855768553648649
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.06516808166340604,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "B2 ridge surrogate",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.65,
+   "dar_ci95": [
+    0.6,
+    0.7
+   ],
+   "nmae": 1.5763541888214538,
+   "nmae_ci95": [
+    1.359770442136077,
+    2.1957443618509185
+   ],
+   "rho": -0.04000000000000003,
+   "rho_ci95": [
+    -0.16,
+    0.07999999999999997
+   ],
+   "tau": -0.06666666666666668,
+   "tau_ci95": [
+    -0.1333333333333334,
+    0.0
+   ],
+   "regret": 0.020709996535910755,
+   "regret_ci95": [
+    0.006141641880657888,
+    0.03527835119116361
+   ],
+   "regret_norm": 1.099874166246628,
+   "regret_norm_ci95": [
+    1.0548404712154886,
+    1.1336494375199826
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.059634699107602086,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "C",
+   "label": "C1 ridge arm-shuffled (control)",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.575,
+   "dar_ci95": [
+    0.4,
+    0.75
+   ],
+   "nmae": 1.5745833968603746,
+   "nmae_ci95": [
+    1.4144808457553326,
+    2.054921333560163
+   ],
+   "rho": 0.09999999999999995,
+   "rho_ci95": [
+    -0.44000000000000006,
+    0.64
+   ],
+   "tau": 0.06666666666666668,
+   "tau_ci95": [
+    -0.4000000000000001,
+    0.5333333333333334
+   ],
+   "regret": 0.03024416044566534,
+   "regret_ci95": [
+    0.002410098796412603,
+    0.05807822209491807
+   ],
+   "regret_norm": 0.9757887091735965,
+   "regret_norm_ci95": [
+    0.5045371189417163,
+    1.6041241628161034
+   ],
+   "zero_regret_rate": 0.4,
+   "zero_regret_rate_ci95": [
+    0.0,
+    0.8
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.07984922166715555,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "control"
+  },
+  {
+   "conv": "C",
+   "label": "R1 one-step oracle (model-based)",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.8,
+   "dar_ci95": [
+    0.75,
+    0.85
+   ],
+   "nmae": 1.288098141124296,
+   "nmae_ci95": [
+    1.0267855166983122,
+    2.0017033559836843
+   ],
+   "rho": 0.7,
+   "rho_ci95": [
+    0.6399999999999999,
+    0.76
+   ],
+   "tau": 0.6000000000000001,
+   "tau_ci95": [
+    0.5333333333333334,
+    0.6666666666666667
+   ],
+   "regret": 0.012585604313299007,
+   "regret_ci95": [
+    0.005723944985027327,
+    0.019447263641570685
+   ],
+   "regret_norm": 0.5885230385223664,
+   "regret_norm_ci95": [
+    0.22007667095739777,
+    0.864857814196093
+   ],
+   "zero_regret_rate": 0.4,
+   "zero_regret_rate_ci95": [
+    0.4,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.022431838099105636,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "reference"
+  },
+  {
+   "conv": "O",
+   "label": "B0 no-effect",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.0,
+   "dar_ci95": [
+    0.0,
+    0.0
+   ],
+   "nmae": 1.5218166702969602,
+   "nmae_ci95": [
+    1.388995619222831,
+    1.8228489827784502
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.031443690972343355,
+   "regret_ci95": [
+    0.017926525210237833,
+    0.044960856734448884
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.06870386537941357,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "B1 bet-on-expert",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.6,
+   "dar_ci95": [
+    0.55,
+    0.65
+   ],
+   "nmae": 1.4837769834556376,
+   "nmae_ci95": [
+    1.4191013577420644,
+    1.6657254998886915
+   ],
+   "rho": null,
+   "rho_ci95": null,
+   "tau": null,
+   "tau_ci95": null,
+   "regret": 0.031443690972343355,
+   "regret_ci95": [
+    0.017926525210237833,
+    0.044960856734448884
+   ],
+   "regret_norm": 1.0,
+   "regret_norm_ci95": [
+    1.0,
+    1.0
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.06870386537941357,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "B2 ridge surrogate",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.65,
+   "dar_ci95": [
+    0.6,
+    0.7
+   ],
+   "nmae": 1.4800818721655058,
+   "nmae_ci95": [
+    1.3798544268707447,
+    1.7230361784159678
+   ],
+   "rho": 0.06000000000000001,
+   "rho_ci95": [
+    -0.04,
+    0.15999999999999998
+   ],
+   "tau": 1.1102230246251566e-17,
+   "tau_ci95": [
+    -0.06666666666666668,
+    0.06666666666666668
+   ],
+   "regret": 0.01911066169766066,
+   "regret_ci95": [
+    0.004305144661619377,
+    0.03391617873370194
+   ],
+   "regret_norm": 0.6837686919020854,
+   "regret_norm_ci95": [
+    0.5786349713388051,
+    0.8239469859864593
+   ],
+   "zero_regret_rate": 0.3,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.04987128254615999,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "baseline"
+  },
+  {
+   "conv": "O",
+   "label": "C1 ridge arm-shuffled (control)",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.65,
+   "dar_ci95": [
+    0.45,
+    0.85
+   ],
+   "nmae": 1.4696623868654795,
+   "nmae_ci95": [
+    1.4424490653052164,
+    1.5864693539430044
+   ],
+   "rho": 0.06,
+   "rho_ci95": [
+    -0.36,
+    0.4800000000000001
+   ],
+   "tau": 0.06666666666666665,
+   "tau_ci95": [
+    -0.33333333333333337,
+    0.4666666666666667
+   ],
+   "regret": 0.03513168824507545,
+   "regret_ci95": [
+    0.0005556128573422567,
+    0.06970776363280864
+   ],
+   "regret_norm": 0.7713955426178988,
+   "regret_norm_ci95": [
+    0.07863497133880518,
+    1.6950763043233563
+   ],
+   "zero_regret_rate": 0.5,
+   "zero_regret_rate_ci95": [
+    0.2,
+    0.8
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.10160573946187354,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "control"
+  },
+  {
+   "conv": "O",
+   "label": "R1 one-step oracle (model-based)",
+   "n_episodes": 2,
+   "n_steps": 10,
+   "degenerate_rate": 0.0,
+   "eps": 1e-06,
+   "eps_source": "caller",
+   "n_boot": 10000,
+   "dar": 0.8,
+   "dar_ci95": [
+    0.75,
+    0.85
+   ],
+   "nmae": 1.2534792811661113,
+   "nmae_ci95": [
+    1.1130546092239841,
+    1.5548204323381332
+   ],
+   "rho": 0.6599999999999999,
+   "rho_ci95": [
+    0.6399999999999999,
+    0.6799999999999999
+   ],
+   "tau": 0.6000000000000002,
+   "tau_ci95": [
+    0.6,
+    0.6000000000000002
+   ],
+   "regret": 0.014976326378350419,
+   "regret_ci95": [
+    0.009638857615695048,
+    0.02031379514100579
+   ],
+   "regret_norm": 0.7154250512360728,
+   "regret_norm_ci95": [
+    0.22483309539358323,
+    1.0833690181179396
+   ],
+   "zero_regret_rate": 0.4,
+   "zero_regret_rate_ci95": [
+    0.4,
+    0.4
+   ],
+   "undecidable_rate": 0.0,
+   "undecidable_rate_ci95": [
+    0.0,
+    0.0
+   ],
+   "nontrivial_step_rate": 0.7,
+   "nontrivial_step_rate_ci95": [
+    0.6,
+    0.8
+   ],
+   "regret_p90": 0.032998492875055206,
+   "n_train_episodes": 16,
+   "n_test_episodes": 2,
+   "n_train_steps": 80,
+   "n_test_steps": 10,
+   "kind": "reference"
+  }
+ ],
+ "checks": {
+  "oracle DAR == 1 on eval split": true,
+  "oracle regret == 0 on eval split": true,
+  "no-effect DAR == 0": true,
+  "chance is measured, not assumed": true,
+  "negative control sits at chance": true,
+  "signs are mixed (a direction metric needs both)": true,
+  "split has no leak": true,
+  "train and eval splits are disjoint": true,
+  "both conventions generated": true,
+  "degenerate ratio below no-signal threshold": true,
+  "Gate-2 ruler passed": true,
+  "plan unit: 1-step ordering is not identical on every step": true,
+  "one-step oracle delta == 1-step truth delta": true
+ },
+ "all_checks_passed": true,
+ "extra": {
+  "per_convention": {
+   "C": {
+    "table": "RolloutTable(steps=10, K=5, episodes=2, degenerate=0.0%)",
+    "ruler": {
+     "passed": true,
+     "oracle_dar": 1.0,
+     "oracle_nmae": 0.0,
+     "oracle_regret_norm": 0.0,
+     "chance_dar_perm_mean": 0.500625,
+     "chance_dar_perm_sd": 0.08133409109961211,
+     "chance_rho": 0.0029,
+     "permutations": 200,
+     "p_positive": 0.4
+    },
+    "oracle": {
+     "label": "REF oracle (ceiling, not a method)",
+     "n_episodes": 2,
+     "n_steps": 10,
+     "degenerate_rate": 0.0,
+     "eps": 1e-06,
+     "eps_source": "caller",
+     "n_boot": 200,
+     "dar": 1.0,
+     "dar_ci95": [
+      1.0,
+      1.0
+     ],
+     "nmae": 0.0,
+     "nmae_ci95": [
+      0.0,
+      0.0
+     ],
+     "rho": 1.0,
+     "rho_ci95": [
+      1.0,
+      1.0
+     ],
+     "tau": 1.0,
+     "tau_ci95": [
+      1.0,
+      1.0
+     ],
+     "regret": 0.0,
+     "regret_ci95": [
+      0.0,
+      0.0
+     ],
+     "regret_norm": 0.0,
+     "regret_norm_ci95": [
+      0.0,
+      0.0
+     ],
+     "zero_regret_rate": 1.0,
+     "zero_regret_rate_ci95": [
+      1.0,
+      1.0
+     ],
+     "undecidable_rate": 0.0,
+     "undecidable_rate_ci95": [
+      0.0,
+      0.0
+     ],
+     "nontrivial_step_rate": 0.7,
+     "nontrivial_step_rate_ci95": [
+      0.6,
+      0.8
+     ],
+     "regret_p90": 0.0
+    }
+   },
+   "O": {
+    "table": "RolloutTable(steps=10, K=5, episodes=2, degenerate=0.0%)",
+    "ruler": {
+     "passed": true,
+     "oracle_dar": 1.0,
+     "oracle_nmae": 0.0,
+     "oracle_regret_norm": 0.0,
+     "chance_dar_perm_mean": 0.500875,
+     "chance_dar_perm_sd": 0.0817915605365248,
+     "chance_rho": 0.0009999999999999992,
+     "permutations": 200,
+     "p_positive": 0.4
+    },
+    "oracle": {
+     "label": "REF oracle (ceiling, not a method)",
+     "n_episodes": 2,
+     "n_steps": 10,
+     "degenerate_rate": 0.0,
+     "eps": 1e-06,
+     "eps_source": "caller",
+     "n_boot": 200,
+     "dar": 1.0,
+     "dar_ci95": [
+      1.0,
+      1.0
+     ],
+     "nmae": 0.0,
+     "nmae_ci95": [
+      0.0,
+      0.0
+     ],
+     "rho": 1.0,
+     "rho_ci95": [
+      1.0,
+      1.0
+     ],
+     "tau": 1.0,
+     "tau_ci95": [
+      1.0,
+      1.0
+     ],
+     "regret": 0.0,
+     "regret_ci95": [
+      0.0,
+      0.0
+     ],
+     "regret_norm": 0.0,
+     "regret_norm_ci95": [
+      0.0,
+      0.0
+     ],
+     "zero_regret_rate": 1.0,
+     "zero_regret_rate_ci95": [
+      1.0,
+      1.0
+     ],
+     "undecidable_rate": 0.0,
+     "undecidable_rate_ci95": [
+      0.0,
+      0.0
+     ],
+     "nontrivial_step_rate": 0.7,
+     "nontrivial_step_rate_ci95": [
+      0.6,
+      0.8
+     ],
+     "regret_p90": 0.0
+    }
+   }
+  },
+  "task_properties": {
+   "plan_content_C": {
+    "n_steps": 120,
+    "rho_mean": 0.6325,
+    "identical_ranking_rate": 0.16666666666666666,
+    "argmax_agreement": 0.5166666666666667
+   },
+   "horizon_collapse_C": {
+    "n_steps": 120,
+    "rho_mean": 0.6325,
+    "identical_ranking_rate": 0.16666666666666666,
+    "argmax_agreement": 0.5166666666666667
+   },
+   "one_step_oracle_identity_max_abs": 2.1027197344425375e-11,
+   "decision_unit": "plan",
+   "plan_len": 3,
+   "plan_tail": 3
+  }
+ }
+}
