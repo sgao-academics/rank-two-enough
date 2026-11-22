@@ -12,7 +12,7 @@ has been run and that the working directory is the repository root.
 
 | table | content | produces | stored evidence |
 |:--|:--|:--|:--|
-| **Table 1** | tail-share law: seven horizons, gain and scalar `R^2` linear in `t/(1-t)` | `code/_scan_tail.py` | `logs/tail_scan/ds_H04..H10_m3.json`, `logs/tail_scan/tail_scan.csv` |
+| **Table 1** | tail-share law: seven horizons, gain and scalar `R^2` linear in `t/(1-t)` | `code/_scan_tail.py` | `logs/tail_scan/ds_H04_m3.json.gz` through `ds_H10_m3.json.gz` (seven horizons), `logs/tail_scan/tail_scan.csv` |
 | **Table 2** | reference points on the full matrix, 360 evaluations, six configurations | `code/run_suite.py`, then `code/run_aggregate.py` | `logs/suite/scene2_spec13/ev_*.json`, `logs/suite/scene2_spec13/aggregate.json`, `logs/route_b.json` |
 | **Table 3** | block decomposition of the degree-2 expansion | `code/_ablation_terms.py`, `code/_block_combo.py` | `logs/ablation_terms.json`, `logs/block_combo.json` |
 | **Table 4** | rank curve on three horizons + the explicit 230/275 rungs | `code/_lrb_final.py --configs m3 H4 H8` | `logs/lrb_final.json` (summary: `logs/lrb_table.json`) |

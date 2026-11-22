@@ -32,6 +32,9 @@ Sizes: the clone is about **136 MB**; unpacked the payload is about **412 MB**.
 ## Quick start
 
 ```bash
+git clone https://github.com/sgao-academics/rank-two-enough.git
+cd rank-two-enough
+
 python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
