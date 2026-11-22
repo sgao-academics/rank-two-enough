@@ -12,7 +12,7 @@ has been run and that the working directory is the repository root.
 
 | table | content | produces | stored evidence |
 |:--|:--|:--|:--|
-| **Table 1** | tail-share law: seven horizons, gain and scalar `R^2` linear in `t/(1-t)` | `code/_scan_tail.py` | `logs/tail_scan/ds_H04_m3.json.gz` through `ds_H10_m3.json.gz` (seven horizons), `logs/tail_scan/tail_scan.csv` |
+| **Table 1** | tail-share relation: seven horizons, gain and scalar `R^2` linear in `t/(1-t)` at a fixed plan length | `code/_scan_tail.py` | `logs/tail_scan/ds_H04_m3.json.gz` through `ds_H10_m3.json.gz` (seven horizons), `logs/tail_scan/tail_scan.csv` |
 | **Table 2** | reference points on the full matrix, 360 evaluations, six configurations | `code/run_suite.py`, then `code/run_aggregate.py` | `logs/suite/scene2_spec13/ev_*.json`, `logs/suite/scene2_spec13/aggregate.json`, `logs/route_b.json` |
 | **Table 3** | block decomposition of the degree-2 expansion | `code/_ablation_terms.py`, `code/_block_combo.py` | `logs/ablation_terms.json`, `logs/block_combo.json` |
 | **Table 4** | rank curve on three horizons + the explicit 230/275 rungs | `code/_lrb_final.py --configs m3 H4 H8` | `logs/lrb_final.json` (summary: `logs/lrb_table.json`) |
@@ -30,6 +30,10 @@ raises inside the fit rather than silently truncating.
 | 3 | the simulator is deterministic; replay drift 1.5e-12, noise floor 1e-6 | `code/gate0_replay.py`, `code/_replay_check.py` | `logs/gate0_mujoco_push3d.json` |
 | 3 | metric definitions, chance level by permutation, gate results | `code/run_selftest.py`, `code/metrics.py` | `logs/selftest_*.log`, `spec/counterfactual_contract_v1.3.json` |
 | 3 | cross-process reproducibility of the split and the fits | `code/check_cross_process.py` | `logs/xproc_A.json`, `logs/xproc_B.json` |
+| 4.1 | leave-one-out 0.965, slope interval, through-origin fit; the odds and the tail steps are one affine pair, slope ratio exactly 3 | `code/_odds_stats.py` | `logs/tail_scan/tail_scan.csv` |
+| 4.1 | gain by mechanism: projections 0.0006 to 0.0075, absolute lateral 0.0179 to 0.0615, across-step 0.0022 to 0.0048 | `code/_gain_decomp.py` | the seven `logs/tail_scan/ds_H*_m3.json` |
+| 4.1 | plan-length sweep at a fixed horizon: four gains 0.0401 / 0.0290 / 0.0331 / 0.0358, no line in the odds (R2 0.33) or in the tail steps (0.06) | `code/_scan_mdim.py` | `logs/mdim_scan/ds_H06_m1.json`, `ds_H06_m2.json`, `ds_H06_m4.json`, `logs/mdim_scan/mdim_scan.csv` |
+| 4.4 | seed-level cluster bootstrap: SE x1.92, paired difference -0.00003 with interval [-0.0011, +0.0011], H=8 at t=-3.3 | `code/_seed_level.py` | `logs/lrb_vs_bilinear.json` |
 | 4.2 | the zero-parameter score occupies 91% of the metric's range | `code/_route_b.py` | `logs/route_b.json` |
 | 4.3 | state curvature moves DAR by -0.0005; plan curvature supplies 29% | `code/_ablation_terms.py` | `logs/ablation_terms.json` |
 | 4.4 | the 198-term block and its 62-term rank-two fit agree to 5e-6 | `code/_lrb_vs_bilinear.py` | `logs/lrb_vs_bilinear.json` |
@@ -38,7 +42,7 @@ raises inside the fit rather than silently truncating.
 | 4.5 | six orderings per plan move the outcome by 7.5e-4, 0.76% of substitutions flip the leader | `code/_order_counterfactual.py --config m3` | `logs/order_counterfactual.json` |
 | 4.5 | at plan length four: sd 5.0e-4, 5.5% of the gap, 0.78% flips, 0.22% joint-limit clips | `code/_order_counterfactual.py --config pl4` | `logs/order_counterfactual_pl4.json` |
 | 4.6 | rank-one participation ratio against an arm-shuffled null | `code/_rank1.py`, `code/_rank1_null.py` | `logs/rank1.json`, `logs/rank1_null.json` |
-| 4.6 | the fitted rank-two block transfers from convention C to O better than the 560-term expansion | `code/_lrb_transfer.py` | `logs/lrb_transfer.json` |
+| 4.6 | the fitted rank-two block transfers from the closed-loop to the open-loop convention | `code/_lrb_transfer139.py` | `logs/lrb_transfer139.json` |
 | 4.6 | penalty sensitivity: tripling the shrinkage on the same 139 coefficients costs 0.0032 | `code/_lrb_sweep.py` | `logs/lrb_sweep.json` |
 
 ## Datasets
